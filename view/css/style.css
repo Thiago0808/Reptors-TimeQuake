@@ -1,3 +1,13 @@
+*{
+    color: white;
+}
+
 body{
-    background-image: url(cenarioCaminho.jpg);
+    background: url(../img/cenarioCaminho.jpg), lightgray 0px -1000px / 100% 200% no-repeat ;
+    background-size: cover;
+}
+
+.historia{
+    margin: auto;
+    max-width: 1250px;
 }
