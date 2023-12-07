@@ -3,8 +3,9 @@
 }
 
 body{
-    background: url(../img/cenarioCaminho.jpg), lightgray 0px -1000px / 100% 200% no-repeat ;
-    background-size: cover;
+    background: url(../img/cenarioCaminho.jpg), no-repeat ;
+    background-size: 100%; 
+    background-position: center 30%;
 }
 
 .historia{
