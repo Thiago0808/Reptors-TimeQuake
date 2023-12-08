@@ -12,3 +12,53 @@ body{
     margin: auto;
     max-width: 1250px;
 }
+
+.questao{
+    background: rgba(0, 0, 0, 0.83);
+    padding: 31px 35px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 19px;
+}
+
+h1{
+    font-family: Lacquer;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+
+p{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 27px; /* 150% */
+}
+
+.opcoes{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 47px;
+}
+
+button{
+    display: inline-flex;
+    padding: 17px 33px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 17px;
+    border: 1px solid #FFF;
+    background: rgba(0, 0, 0, 0.50);
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px; /* 155.556% */
+    cursor: pointer;
+}
