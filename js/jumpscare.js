@@ -11,7 +11,6 @@ function ativarJumpscare(){
 
     alterarSanidade("perde");
 
-    usados.push(sorteado);
     body.classList.add("corpo")
     divJumpscare.style.display="block"
     imgJumpscare.src = "../img/jumpscare/jumpscare"+sorteado+".jpg"
@@ -25,7 +24,7 @@ function sortearJumpscare(){
             sortearJumpscare()
         }
     }
-
+    usados.push(sorteado);
     return sorteado
 }
 
