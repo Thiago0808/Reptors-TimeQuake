@@ -19,7 +19,7 @@ function alterarSanidade(numero){
     quantidadeSanidade += numero;
 
     if (quantidadeSanidade == 0 ){
-        //Enlouquecer
+        //Função de Enlouquecer
     }
     else{
         barraSanidade.value = quantidadeSanidade
@@ -31,7 +31,7 @@ function alterarVida(numero){
     quantidadeVida += numero;
 
     if (quantidadeVida == 0 ){
-        //Morrer
+        //Função de Morrer
     }
     else{
         barraVida.value = quantidadeVida
