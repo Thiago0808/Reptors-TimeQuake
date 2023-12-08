@@ -9,11 +9,14 @@ function sortearQuestao(limite, usados){
     sorteado = Math.ceil(Math.random()*limite)
     sorteado --;
 
-    for (let i=0; i<usados.length; i++){
-        if (usados[i] = sorteado){
-            sortearQuestao(limite, usados)
+    if (usados.lenght){
+        for (let i=0; i<usados.length; i++){
+            if (usados[i] = sorteado){
+                sortearQuestao(limite, usados)
+            }
         }
     }
+
     usados.push(sorteado);
 
     return sorteado
@@ -28,7 +31,7 @@ function alterarTexto(questao){
 
 
 for (let i = 0; i < botoes.length; i ++){
-    botoes[i],addEventListener("click", function(){
+    botoes[i].addEventListener("click", function(){
         switch(cenario){
             case "floresta":
                 ativarConjuntoFloresta(botoes[i].value)

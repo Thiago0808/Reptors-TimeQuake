@@ -4,7 +4,7 @@ let imgJumpscare = document.getElementById("imgJumpscare")
 
 
 
-usados= [];
+jumpscareUsados= [];
 
 function ativarJumpscare(){
     sorteado = sortearJumpscare()
@@ -19,12 +19,12 @@ function ativarJumpscare(){
 function sortearJumpscare(){
     sorteado = Math.ceil(Math.random()*5)
 
-    for (let i=0; i<usados.length; i++){
-        if (usados[i] = sorteado){
+    for (let i=0; i<jumpscareUsados.length; i++){
+        if (jumpscareUsados[i] = sorteado){
             sortearJumpscare()
         }
     }
-    usados.push(sorteado);
+    jumpscareUsados.push(sorteado);
     return sorteado
 }
 

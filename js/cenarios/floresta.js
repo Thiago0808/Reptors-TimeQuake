@@ -51,3 +51,11 @@ function cnf(){
     questaoAtual = questao
     conjuntoAtual = "conjuntoNorteador"
 }
+
+function cif(){
+    sorteado = sortearQuestao(conjuntoInseto.length, insetoUsados)
+    questao = conjuntoInseto[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoInseto"
+}
