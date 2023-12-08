@@ -15,8 +15,8 @@ function verificarVida(){
     return quantidadeVida;
 }
 
-function diminuirSanidade(numero){
-    quantidadeSanidade -= numero;
+function alterarSanidade(numero){
+    quantidadeSanidade += numero;
 
     if (quantidadeSanidade == 0 ){
         //Enlouquecer
@@ -27,8 +27,8 @@ function diminuirSanidade(numero){
     }
 }
 
-function diminuirVida(numero){
-    quantidadeVida -= numero;
+function alterarVida(numero){
+    quantidadeVida += numero;
 
     if (quantidadeVida == 0 ){
         //Morrer

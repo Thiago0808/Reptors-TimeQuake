@@ -9,7 +9,7 @@ usados= [];
 function ativarJumpscare(){
     sorteado = sortearJumpscare()
 
-    diminuirSanidade(25);
+    diminuirSanidade(-25);
 
     usados.push(sorteado);
     body.classList.add("corpo")
@@ -25,7 +25,7 @@ function sortearJumpscare(){
             sortearJumpscare()
         }
     }
-    
+
     return sorteado
 }
 
