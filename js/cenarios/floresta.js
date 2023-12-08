@@ -18,7 +18,7 @@ norteadorUsados = []
 var questaoCoelho = {nome: "questaoCoelho", titulo: "A curiosidade, às vezes, salva", botao1: "Andar em direção ao rio, em procura de mantimentos", botao2: "Andar em direção contrária do rio, em procura de mantimentos", texto: "Você encontra um pequeno coelho indefeso. Você rapidamente pega o animal e o assa em uma fogueira improvisada. Quem diria que, para alguém como você, fosse útil possuir esses conhecimentos. Na verdade, coelhos existiam nessa época? Não importa. O que importa é que você irá agora:",}
 var questaoJumpscareBarulho = {nome: "questaoJumpscareBarulho", titulo: "Por que uma escolha tem que ser tão cruel?", botao1: "Procurar um rio para lavar sua ferida", botao2: "Arrancar algumas folhas de árvore  para enfaixar sua ferida", texto: "O barulho era da última criatura na qual você gostaria de encontrar. Com a pata cheia de garras, ela arranha sua barriga e você grita de dor. O animal foge para longe, como se quisesse apenas brincar com os indefesos que há em seu território. Mesmo sangrando muito, você tenta manter a cabeça no lugar e decidir seu próximo passo em sua jornada. Você irá:",}
 
-conjuntoBarulho = {questaoCoelho, questaoJumpscareBarulho}
+conjuntoBarulho = [questaoCoelho, questaoJumpscareBarulho]
 barulhoUsados = []
 
 
@@ -30,12 +30,20 @@ insetoUsados = []
 
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
-        if (questaoAtual.nome = "questaoInicial"){
+        if (questaoAtual.nome == "questaoInicial"){
             cnf() // Controlador das questões Norteadoras da Floresta
         }
-        else if (questaoAtual.nome = "questaoInseto"){
+        else if (questaoAtual.nome == "questaoInseto"){
             if (botao == "botao1"){
-                cif() // Controlador das questões Norteadoras da Floresta
+                cif() // Controlador das questões de Inseto da Floresta
+            }
+            else{
+                cnf() // Controlador das questões Norteadoras da Floresta
+            }
+        }
+        else if (questaoAtual.nome == "questaoBarulho"){
+            if (botao == "botao1"){
+                cbf() // Controlador das questões de Barulho da Floresta
             }
             else{
                 cnf() // Controlador das questões Norteadoras da Floresta
@@ -49,6 +57,7 @@ function cnf(){
     questao = conjuntoNorteador[sorteado]
     alterarTexto(questao)
     questaoAtual = questao
+    console.log(questaoAtual.nome)
     conjuntoAtual = "conjuntoNorteador"
 }
 
@@ -58,4 +67,12 @@ function cif(){
     alterarTexto(questao)
     questaoAtual = questao
     conjuntoAtual = "conjuntoInseto"
+}
+
+function cbf(){
+    sorteado = sortearQuestao(conjuntoBarulho.length, barulhoUsados)
+    questao = conjuntoBarulho[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoBarulho"
 }
