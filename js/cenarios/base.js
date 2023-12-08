@@ -21,8 +21,8 @@ function sortearQuestao(limite, usados){
 function alterarTexto(questao){
     titulo.innerHTML = questao.titulo
     texto.innerHTML = questao.texto
-    opcao1.innerHTML = questao.opcao1
-    opcao2.innerHTML = questao.opcao2
+    botao1.innerHTML = questao.botao1
+    botao2.innerHTML = questao.botao2
 }
 
 
