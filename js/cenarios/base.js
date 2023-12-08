@@ -6,8 +6,10 @@ botao2 = document.getElementById("botao2")
 botoes = [botao1, botao2]
 
 function sortearQuestao(limite, usados){
+    console.log(limite)
     sorteado = Math.ceil(Math.random()*limite)
     sorteado --;
+
 
     if (usados.lenght){
         for (let i=0; i<usados.length; i++){
