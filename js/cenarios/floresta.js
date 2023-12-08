@@ -54,6 +54,8 @@ function ativarConjuntoFloresta(botao){
  
 function cnf(){
     sorteado = sortearQuestao(conjuntoNorteador.length, norteadorUsados)
+    console.log(sorteado)
+
     questao = conjuntoNorteador[sorteado]
     alterarTexto(questao)
     questaoAtual = questao
@@ -71,6 +73,7 @@ function cif(){
 
 function cbf(){
     sorteado = sortearQuestao(conjuntoBarulho.length, barulhoUsados)
+    console.log(sorteado)
     questao = conjuntoBarulho[sorteado]
     alterarTexto(questao)
     questaoAtual = questao
