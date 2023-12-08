@@ -10,7 +10,6 @@ function sortearQuestao(limite, usados){
     sorteado = Math.ceil(Math.random()*limite)
     sorteado --;
 
-
     if (usados.lenght){
         for (let i=0; i<usados.length; i++){
             if (usados[i] = sorteado){
@@ -19,7 +18,7 @@ function sortearQuestao(limite, usados){
         }
     }
 
-    usados.push(sorteado);
+    usados.push(sorteado)
 
     return sorteado
 }
