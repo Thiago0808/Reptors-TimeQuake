@@ -1,9 +1,9 @@
-botoes = document.querySelectorAll("button")
-
 titulo = document.getElementById("titulo")
 texto = document.getElementById("texto")
-opcao1 = document.getElementById("opcao1")
-opcao2 = document.getElementById("opcao2")
+botao1 = document.getElementById("botao1")
+botao2 = document.getElementById("botao2")
+
+botoes = [botao1, botao2]
 
 function sortearQuestao(limite, usados){
     sorteado = Math.ceil(Math.random()*limite)

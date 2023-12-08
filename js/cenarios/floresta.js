@@ -19,20 +19,22 @@ var questaoCoelho = {nome: "questaoCoelho", titulo: "A curiosidade, às vezes, s
 var questaoJumpscareBarulho = {nome: "questaoJumpscareBarulho", titulo: "Por que uma escolha tem que ser tão cruel?", opcao1: "Procurar um rio para lavar sua ferida", opcao2: "Arrancar algumas folhas de árvore  para enfaixar sua ferida", texto: "O barulho era da última criatura na qual você gostaria de encontrar. Com a pata cheia de garras, ela arranha sua barriga e você grita de dor. O animal foge para longe, como se quisesse apenas brincar com os indefesos que há em seu território. Mesmo sangrando muito, você tenta manter a cabeça no lugar e decidir seu próximo passo em sua jornada. Você irá:",}
 
 consequenciaBarulho = {questaoCoelho, questaoJumpscareBarulho}
+barulhoUsados = []
 
 
 var questaoAranha = {nome: "questaoAranha", titulo: "agonia de pequenas pernas", opcao1: "Seguir em frente, em direção às colinas", opcao2: "Sentar um pouco, você precisa descansar", texto: "Uma aranha rapidamente pulou em sua mão, esfregando suas pernas peludas em sua pele. Em desespero, você sacode sua mão, tentando derrubar ela, na qual surte efeito. Por um momento. Ela ligeiramente sobe uma árvore e pula diretamente em seu rosto. Assustado e agoniado, você esfrega suas mãos desesperamente em seu rosto, e a aranha cai novamente no chão, dessa vez indo para longe. Essa pequena criatura aparentou ter gostado de você. Mas agora, você precisará ignorar potenciais “amigos” e continuar seu caminho. Voce irá:",}
 
-consequenciaIseto = [questaoAranha]
+consequenciaInseto = [questaoAranha]
+insetoUsados = []
 
 
-function ativarConjuntoFloresta(opcao){
+function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
         if (questaoAtual.nome = "questaoInicial"){
             function cnf() // Controlador das questões Norteadoras da Floresta
         }
         else if (questaoAtual.nome = "questaoInseto"){
-            if (opcao == "opcao1"){
+            if (botao == "botao1"){
                 function cif() // Controlador das questões Norteadoras da Floresta
             }
             else{
