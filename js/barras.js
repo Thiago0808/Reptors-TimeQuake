@@ -15,8 +15,13 @@ function verificarVida(){
     return quantidadeVida;
 }
 
-function alterarSanidade(numero){
-    quantidadeSanidade += numero;
+function alterarSanidade(alteracao){
+    if (alteracao == "ganha"){
+        quantidadeSanidade += 10;
+    }
+    else  if (alteracao == "perde"){
+        quantidadeSanidade -= 10;
+    }
 
     if (quantidadeSanidade == 0 ){
         //Função de Enlouquecer
@@ -27,8 +32,13 @@ function alterarSanidade(numero){
     }
 }
 
-function alterarVida(numero){
-    quantidadeVida += numero;
+function alterarVida(alteracao){
+    if (alteracao == "ganha"){
+        quantidadeVida += 10;
+    }
+    else  if (alteracao == "perde"){
+        quantidadeVida -= 10;
+    }
 
     if (quantidadeVida == 0 ){
         //Função de Morrer
