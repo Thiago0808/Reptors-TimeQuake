@@ -30,7 +30,7 @@ for (let i = 0; i < botoes.length; i ++){
     botoes[i],addEventListener("click", function(){
         switch(cenario){
             case "floresta":
-                //Funcao de ir pra Floresta
+                ativarConjuntoFloresta(botoes[i].value)
                 break;
             case "caverna":
                 //Funcao de ir pra Caverna

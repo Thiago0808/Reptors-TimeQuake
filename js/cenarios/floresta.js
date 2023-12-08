@@ -1,5 +1,6 @@
 cenario = "floresta"
-questaoAtual = "questaoNorteadora"
+conjuntoAtual = "conjuntoNorteador"
+questaoAtual = {nome: "questaoInicial", titulo: "O Tempo é o seu pior inimigo agora", opcao1: "Você ficará onde está, com medo de explorar as redondezas", opcao2: "Você irá explorar a selva, em busca de mantimentos", texto: "Você estava em 2131, testando a nova versão de sua máquina de tempo. A segurança não era algo que você priorizava. Ao realizar a viagem no tempo, você foi parar há 100 milhões de anos atrás. A máquina sofreu graves danos no processo, além de agravar ainda mais seus problemas neurológicos, o que te fez acordar apenas 5 dias depois de sua chegada a este mundo estranho. A máquina está tão danificada que está voltando no passado lentamente, de dia em dia. Você percebe que precisa sobreviver até o “primeiro dia”, ou seja, até a data em que você viajou para essa linha do tempo pare reverter o processo. Para isso, você deve manter no minímo 60% de sua vida e sanidade até lá. Você é sábio, sabe quais criaturas habitam nesse espaço-tempo. Ou, pelo menos, acha que sabe.",}
 
 // var questaoExemplo = {nome: "", titulo: "", opcao1: "", opcao2: "", texto: "",}
 
@@ -25,22 +26,26 @@ var questaoAranha = {nome: "questaoAranha", titulo: "agonia de pequenas pernas",
 consequenciaIseto = [questaoAranha]
 
 
-function floresta(opcao){
-    switch (questaoAtual) {
-        case "questaoNorteadora":
-            function cnf(opcao) // Controlador das questões Norteadoras da Floresta
-            break;
-        case "barulho":
-            function cbf(opcao) // Controlador das questões de Barulho da Floresta
-            break;
-        case "inseto":
-            function cff(opcao) // Controlador das questões de Inseto da Floresta
-            break;
+function ativarConjuntoFloresta(opcao){
+    if (conjuntoAtual == "conjuntoNorteador"){
+        if (questaoAtual.nome = "questaoInicial"){
+            function cnf() // Controlador das questões Norteadoras da Floresta
+        }
+        else if (questaoAtual.nome = "questaoInseto"){
+            if (opcao == "opcao1"){
+                function cif() // Controlador das questões Norteadoras da Floresta
+            }
+            else{
+                function cnf() // Controlador das questões Norteadoras da Floresta
+            }
+        }
     }
 }
  
-
-function cbf(opcao){
+function cnf(){
     sorteado = sortearQuestao(questaoNorteadora.length, norteadoraUsados)
-    alterarTexto(questaoNorteadora[sorteado])
+    questao = questaoNorteadora[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoNorteador"
 }
