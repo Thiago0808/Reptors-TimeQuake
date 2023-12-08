@@ -1,6 +1,7 @@
 cenario = "Floresta"
 
-var questaoExemplo = {nome: "", titulo: "", opcao1: "", opcao2: "", texto: "",}
+
+//var questaoExemplo = {nome: "", titulo: "", opcao1: "", opcao2: "", texto: "",}
 
 var questaoInseto = {nome:"questaoInseto", titulo: "PERIGO extremamente próximo", opcao1: "Pegar o inseto na mão, evitando irritar-lo", opcao2: "Bater no inseto, para matá-lo de uma vez", texto: "Você sente um formigamentos em suas costas. Você sabe que algum inseto pode ter entrado em sua camisa. Neste ambiente hostil, você sabe que poderá ser desde uma formiga inofensiva até uma terrível aranha venenosa. Você terá que elaborar uma estrátegia para preparar-se para o o que der e vier. Você irá:" };
 var questaoAranha = {nome: "questaoAranha", titulo: "agonia de pequenas pernas", opcao1: "Seguir em frente, em direção às colinas", opcao2: "Sentar um pouco, você precisa descansar", texto: "Uma aranha rapidamente pulou em sua mão, esfregando suas pernas peludas em sua pele. Em desespero, você sacode sua mão, tentando derrubar ela, na qual surte efeito. Por um momento. Ela ligeiramente sobe uma árvore e pula diretamente em seu rosto. Assustado e agoniado, você esfrega suas mãos desesperamente em seu rosto, e a aranha cai novamente no chão, dessa vez indo para longe. Essa pequena criatura aparentou ter gostado de você. Mas agora, você precisará ignorar potenciais “amigos” e continuar seu caminho. Voce irá:",}
