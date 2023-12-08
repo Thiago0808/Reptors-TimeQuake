@@ -11,6 +11,7 @@ body{
 .historia{
     margin: auto;
     max-width: 1250px;
+    margin-top: 36px;
 }
 
 .questao{
@@ -22,6 +23,7 @@ body{
     gap: 19px;
 }
 
+/* Titulo */
 h1{
     font-family: Lacquer;
     font-size: 27px;
@@ -30,7 +32,7 @@ h1{
     line-height: normal;
     text-decoration-line: underline;
 }
-
+/* Pergunta */
 p{
     color: #FFF;
     font-family: Inter;
@@ -43,7 +45,7 @@ p{
 .opcoes{
     display: flex;
     justify-content: space-between;
-    margin-top: 47px;
+    margin-top: 20px;
 }
 
 button{
@@ -62,3 +64,86 @@ button{
     line-height: 28px; /* 155.556% */
     cursor: pointer;
 }
+
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 150px;
+    margin-left: 6%;
+    margin-right: 6%;
+    align-items: flex-end;
+}
+
+.barras{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+
+/* Barra de Progresso */
+progress{
+    max-width: 100px;
+    border: 2px solid white;
+    margin-bottom: 8px;
+    margin-top: 12px;
+}
+
+/* Chrome/Safari */ 
+progress::-webkit-progress-bar { 
+    background: black
+} 
+
+progress::-webkit-progress-value { 
+    background-color: white !important; 
+} 
+
+/* Firefox */ 
+progress { 
+    background-color: black; 
+} 
+
+progress::-moz-progress-bar { 
+    background-color: white !important; 
+} 
+
+/*IE10 */ 
+progress { 
+    background-color: black; 
+} 
+
+progress { 
+    background-color: white; 
+} 
+
+
+
+/* Porcentagem */
+h3{
+    color: #FFF;
+    font-family: Lacquer;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.vida, .sanidade{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+}
+
+/* Hora */
+h2{
+    font-family: Lacquer;
+    font-size: 84px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
