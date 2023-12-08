@@ -30,6 +30,8 @@ function alterarTexto(questao){
 }
 
 
+
+
 for (let i = 0; i < botoes.length; i ++){
     botoes[i].addEventListener("click", function(){
         switch(cenario){

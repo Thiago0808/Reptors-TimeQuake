@@ -75,4 +75,19 @@ function cbf(){
     alterarTexto(questao)
     questaoAtual = questao
     conjuntoAtual = "conjuntoBarulho"
+    consequenciasFloresta(questao)
+}
+
+function consequenciasFloresta(questao){
+    if (conjuntoAtual == "conjuntoNorteador"){
+        if (questaoAtual.nome == "questaoJumpscareBarulho"){
+            cnf() // Controlador das questões Norteadoras da Floresta
+        }
+    }
+    else if (conjuntoAtual = "conjuntoBarulho"){
+        if (questaoAtual.nome = "questaoJumpscareBarulho"){
+            alterarSanidade("perde")
+            alterarVida("perde")
+        }
+    }
 }
