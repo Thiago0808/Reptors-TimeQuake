@@ -7,6 +7,7 @@ botoes = [botao1, botao2]
 
 function sortearQuestao(limite, usados){
     sorteado = Math.ceil(Math.random()*limite)
+    sorteado --;
 
     for (let i=0; i<usados.length; i++){
         if (usados[i] = sorteado){
