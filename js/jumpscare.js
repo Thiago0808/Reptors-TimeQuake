@@ -2,8 +2,6 @@ let body = document.querySelector("body")
 let divJumpscare = document.getElementById("divJumpscare")
 let imgJumpscare = document.getElementById("imgJumpscare")
 
-
-
 jumpscareUsados= [];
 
 function ativarJumpscare(){
