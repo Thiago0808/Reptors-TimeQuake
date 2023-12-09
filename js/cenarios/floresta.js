@@ -59,8 +59,8 @@ function cnf(){
     questao = conjuntoNorteador[sorteado]
     alterarTexto(questao)
     questaoAtual = questao
-    console.log(questaoAtual.nome)
     conjuntoAtual = "conjuntoNorteador"
+    consequenciasFloresta(questao)
 }
 
 function cif(){
@@ -74,23 +74,26 @@ function cif(){
 function cbf(){
     sorteado = sortearQuestao(conjuntoBarulho.length, barulhoUsados)
     console.log(sorteado)
+
     questao = conjuntoBarulho[sorteado]
     alterarTexto(questao)
     questaoAtual = questao
     conjuntoAtual = "conjuntoBarulho"
+    console.log(questaoAtual.nome)
     consequenciasFloresta(questao)
 }
 
 function consequenciasFloresta(questao){
     if (conjuntoAtual == "conjuntoNorteador"){
-        if (questaoAtual.nome == "questaoJumpscareBarulho"){
-            cnf() // Controlador das questões Norteadoras da Floresta
-        }
+        // if (questaoAtual.nome == "questaoJumpscareBarulho"){
+        //     cnf() // Controlador das questões Norteadoras da Floresta
+        // }
     }
-    else if (conjuntoAtual = "conjuntoBarulho"){
-        if (questaoAtual.nome = "questaoJumpscareBarulho"){
+    else if (conjuntoAtual == "conjuntoBarulho"){
+        if (questaoAtual.nome == "questaoJumpscareBarulho"){
             alterarSanidade("perde")
             alterarVida("perde")
+            ativarJumpscare()
         }
     }
 }
