@@ -30,7 +30,7 @@ insetoUsados = []
 
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
-        if (questaoAtual.nome == "questaoInicial"){
+        if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoCaverna"){
             cnf() // Controlador das questões Norteadoras da Floresta
         }
         else if (questaoAtual.nome == "questaoInseto"){
@@ -54,8 +54,6 @@ function ativarConjuntoFloresta(botao){
  
 function cnf(){
     sorteado = sortearQuestao(conjuntoNorteador.length, norteadorUsados)
-    console.log(sorteado)
-
     questao = conjuntoNorteador[sorteado]
     alterarTexto(questao)
     questaoAtual = questao

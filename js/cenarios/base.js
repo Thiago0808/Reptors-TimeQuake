@@ -9,15 +9,18 @@ function sortearQuestao(limite, usados){
     sorteado = Math.ceil(Math.random()*limite)
     sorteado --;
 
-    if (usados.lenght){
+    if (usados.length>0){
         for (let i=0; i<usados.length; i++){
-            if (usados[i] = sorteado){
+            //console.log(usados[i], sorteado)
+            if (usados[i] == sorteado){
                 sortearQuestao(limite, usados)
             }
         }
     }
+    console.log("Teste")
 
-    //usados.push(sorteado);
+    usados.push(sorteado);
+    console.log(usados)
 
     return sorteado
 }
