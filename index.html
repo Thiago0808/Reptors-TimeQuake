@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="view/css/style.css">
     <link rel="stylesheet" href="view/css/style_responsivo.css">
 
+    <!-- Biblioteca animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
     <!-- Conexão das fontes do Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,11 +31,11 @@
         </div>
 
         <div class="historia">
-            <div class="questao">
+            <div class="questao animate__animated animate__fadeInDown">
                 <h1 id="titulo">O Tempo é o seu pior inimigo agora</h1>
                 <p id="texto">Você estava em 2131, testando a nova versão de sua máquina de tempo. A segurança não era algo que você priorizava. Ao realizar a viagem no tempo, você foi parar há 100 milhões de anos atrás. A máquina sofreu graves danos no processo, além de agravar ainda mais seus problemas neurológicos, o que te fez acordar apenas 5 dias depois de sua chegada a este mundo estranho. A máquina está tão danificada que está voltando no passado lentamente, de dia em dia. Você percebe que precisa sobreviver até o “primeiro dia”, ou seja, até a data em que você viajou para essa linha do tempo pare reverter o processo. Para isso, você deve manter no minímo 60% de sua vida e sanidade até lá. Você é sábio, sabe quais criaturas habitam nesse espaço-tempo. Ou, pelo menos, acha que sabe.</p>
             </div>
-            <div class="opcoes">
+            <div class="opcoes animate__animated animate__fadeIn animate__delay-1s">
                 <button id="botao1" value="botao1">Você ficará onde está, com medo de explorar as redondezas</button>
                 <button id="botao2" value="botao2">Você irá explorar a selva, em busca de mantimentos</button>
             </div>
@@ -40,19 +43,19 @@
 
         <div class="info">
             <div class="barras"> 
-                <div class="sanidade">
+                <div class="sanidade animate__animated animate__fadeInLeft animate__delay-2s">
                     <img src="view/img/componentes/sanidade.png" alt="">
                     <progress id="barraSanidade" value="100" max="100"></progress>
                     <h3 id="porcentagemSanidade">100%</h3>
                 </div>
-                <div class="vida">
+                <div class="vida animate__animated animate__fadeInLeft animate__delay-3s">
                     <img src="view/img/componentes/vida.png" alt="">
                     <progress id="barraVida" value="100" max="100"></progress>
                     <h3 id="porcentagemVida">100%</h3>
                 </div>
             </div>
 
-            <div class="dia">
+            <div class="dia animate__animated animate__fadeInRight animate__delay-4s">
                 <h2 id="diaAtual">dia 5</h2> 
             </div>
 
