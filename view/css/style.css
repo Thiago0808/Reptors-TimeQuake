@@ -8,6 +8,13 @@ body{
     background-position: center 30%;
 }
 
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
 .historia{
     margin: auto;
     max-width: 1250px;
