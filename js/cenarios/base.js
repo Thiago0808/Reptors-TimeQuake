@@ -5,22 +5,58 @@ botao2 = document.getElementById("botao2")
 
 botoes = [botao1, botao2]
 
-function sortearQuestao(limite, usados){
-    sorteado = Math.ceil(Math.random()*limite)
-    sorteado --;
+function removerElementosValor(array, valor) {
+    var i = array.length;
+    while (i--) {
+        if (array[i] === valor) {
+            array.splice(i, 1);
+        }
+    }
+    return array;
+}
 
-    if (usados.length>0){
-        for (let i=0; i<usados.length; i++){
-            //console.log(usados[i], sorteado)
-            if (usados[i] == sorteado){
-                sortearQuestao(limite, usados)
+function numerosPermitidos(limite, usados){
+    permitidos = []
+    n = 0;
+    while (n<limite){
+        permitidos.push(n)
+        n++;
+    }
+    
+
+    for (let i=0; i<permitidos.length; i++){
+        for (let j=0; j<usados.length; j++){
+            if (permitidos[i] == usados[j] ){
+                permitidos[i] = -1;    
+            }
+        
+        }
+    }
+
+    permitidos = removerElementosValor(permitidos, -1)
+
+    return permitidos;
+
+}
+
+function sortearQuestao(limite, usados){
+    permitidos = numerosPermitidos(limite, usados);
+
+    if (permitidos.length>0){
+        condicao = true
+        while (condicao){
+            sorteado = Math.ceil(Math.random()*limite)
+            sorteado --;
+            for (let i=0; i<permitidos.length; i++){
+                //console.log(usados[i], sorteado)
+                if (permitidos[i] == sorteado){
+                    condicao = false
+                }
             }
         }
     }
-    console.log("Teste")
 
     usados.push(sorteado);
-    console.log(usados)
 
     return sorteado
 }
