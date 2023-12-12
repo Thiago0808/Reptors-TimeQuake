@@ -44,9 +44,8 @@ h1{
 p{
     color: #FFF;
     font-family: Inter;
-    font-size: 18px;
+    font-size: 1.1rem;
     font-style: normal;
-    font-weight: 400;
     line-height: 27px; /* 150% */
 }
 
