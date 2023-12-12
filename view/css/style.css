@@ -74,6 +74,11 @@ button{
     cursor: pointer;
 }
 
+.botao1:hover,.botao2:hover{
+    transform: scale(1.09);
+    transition: 100ms linear; 
+}
+
 
 .info{
     display: flex;
@@ -146,7 +151,7 @@ h3{
     max-width: 100px;
 }
 
-/* Hora */
+/* Dia */
 h2{
     font-family: Lacquer;
     font-size: 84px;
