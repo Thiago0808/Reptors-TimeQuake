@@ -8,11 +8,15 @@ botoes = [botao1, botao2]
 
 var cenario = "floresta"
 
-function mudarCenario(Cenario){
-    imagem = "url(view/img/cenarios/cenario"+Cenario+".jpg)"
-    console.log(imagem)
-
-    body.style.backgroundImage = imagem
+function mudarCenario(local){
+    if (local == "caverna"){
+        imagem = "url(view/img/cenarios/cenarioCaverna.jpg)"
+        body.style.backgroundImage = imagem
+        cenario = "caverna"
+        questaoAtual = questaoEntrada
+        conjuntoAtual = "conjuntoEntrada"
+        ativarConjuntoCaverna("inicial")
+    }
 }
 
 

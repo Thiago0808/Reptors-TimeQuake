@@ -50,9 +50,7 @@ function ativarConjuntoFloresta(botao){
         }
         else if (questaoAtual.nome == "questaoCaverna"){
             if (botao == "botao1"){
-                mudarCenario("Caverna")
-                cenario = "caverna"
-                ativarConjuntoCaverna("Oi")
+                mudarCenario("caverna")
             }
             else{
                 cnf() // Controlador das questões Norteadoras da Floresta
