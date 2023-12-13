@@ -15,10 +15,7 @@ conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerig
 norteadorUsados = []
 
 
-var questaoDormiu = {nome: "questaoDormiu", titulo: "o pior sono de sua vida", botao1: "Ignorar a picada e continuar explorando", botao2: "Pegar algumas frutas, na esperança que elas te façam melhorar", texto: "Você acaba dormindo sem querer. Você acorda apenas três horas depois, muito desonrientado. Você sente que sua mão está dormente. Ao olhar ela, havia um inseto impregnado em sua pele. No desespero, você arranca ele e o joga para longe. Vocẽ está enjoado e confuso. Por causa disso, você conclui que o inseto era venenoso. Você irá:",}
 
-conjuntoSono = [questaoDormiu]
-sonoUsados = []
 
 
 var questaoCoelho = {nome: "questaoCoelho", titulo: "A curiosidade, às vezes, salva", botao1: "Andar em direção ao rio, em procura de mantimentos", botao2: "Andar em direção contrária do rio, em procura de mantimentos", texto: "Você encontra um pequeno coelho indefeso. Você rapidamente pega o animal e o assa em uma fogueira improvisada. Quem diria que, para alguém como você, fosse útil possuir esses conhecimentos. Na verdade, coelhos existiam nessa época? Não importa. O que importa é que você irá agora:",}
@@ -32,6 +29,19 @@ var questaoAranha = {nome: "questaoAranha", titulo: "agonia de pequenas pernas",
 
 conjuntoInseto = [questaoAranha]
 insetoUsados = []
+
+var questaoDormiu = {nome: "questaoDormiu", titulo: "o pior sono de sua vida", botao1: "Ignorar a picada e continuar explorando", botao2: "Pegar algumas frutas, na esperança que elas te façam melhorar", texto: "Você acaba dormindo sem querer. Você acorda apenas três horas depois, muito desonrientado. Você sente que sua mão está dormente. Ao olhar ela, havia um inseto impregnado em sua pele. No desespero, você arranca ele e o joga para longe. Vocẽ está enjoado e confuso. Por causa disso, você conclui que o inseto era venenoso. Você irá:",}
+
+conjuntoSono = [questaoDormiu]
+sonoUsados = []
+
+
+var questaoFrutaBoa = {nome: "questaoFrutaBoa", titulo: "o desconhecido te cura", botao1: "Andar para a frente. Você não tem muita escolha mesmo", botao2: "Para a direita, em direção a parte mais densa da floresta", texto: "Não demorou muito para, após se alimentar das frutas, você se sente um pouco melhor. Mas foi arriscado. Havia a possibilidade das frutas serem tóxicas e fazer com que o seu fim chegasse mais rapidamente. Você fica decepcionado consigo mesmo por não ter olhado melhor o seu antigo livro de sobrevivencia. Enfim, vocẽ não tinha muito tempo em sua rotina para esse tipo de leitura. Com as forças mais restauradas, você irá:",}
+var questaoFrutaRuim = {nome: "questaoFrutaRuim", titulo: "o desconhecido te mata", botao1: "Andar para a frente. Você não tem muita escolha mesmo", botao2: "Para a direita, em direção a parte mais densa da floresta", texto: "Não demorou muito para, após se alimentar das frutas, você se sente pior do que antes. Foi arriscado. Você sabia que havia a possibilidade das frutas serem tóxicas e fazer com que o seu fim chegasse mais rapidamente. Você fica decepcionado consigo mesmo por não ter olhado melhor o seu antigo livro de sobrevivencia. Enfim, vocẽ não tinha muito tempo em sua rotina para esse tipo de leitura. Com as forças ainda mais reduzidas, você irá:",}
+
+conjuntoFrutas = [questaoFrutaBoa, questaoFrutaRuim]
+frutasUsados = []
+
 
 
 function ativarConjuntoFloresta(botao){
@@ -72,6 +82,19 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
+    else if (conjuntoAtual == "conjuntoSono"){
+        if (questaoAtual.nome == "questaoDormiu"){
+            if (botao == "botao1"){
+                cnf() // Controlador das questões Norteadoras da Floresta
+            }
+            else{
+                cff() // Controlador das questões de Frutas da Floresta
+            }
+        }
+    }
+    else if (conjuntoAtual == "conjuntoFrutas"){
+        cnf() // Controlador das questões Norteadoras da Floresta
+    }
 }
  
 function cnf(){
@@ -110,6 +133,15 @@ function csf(){
     consequenciasFloresta(questao)
 }
 
+function cff(){
+    sorteado = sortearQuestao(conjuntoFrutas.length, frutasUsados)
+    questao = conjuntoFrutas[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoFrutas"
+    consequenciasFloresta(questao)
+}
+
 function consequenciasFloresta(questao){
     if (conjuntoAtual == "conjuntoNorteador"){
         if (questaoAtual.nome == "questaoPerigo"){
@@ -123,6 +155,14 @@ function consequenciasFloresta(questao){
             alterarSanidade("perde")
             alterarVida("perde")
             ativarJumpscare()
+        }
+    }
+    else if (conjuntoAtual == "conjuntoFrutas"){
+        if (questaoAtual.nome == "questaoFrutaBoa"){
+            alterarVida("ganha")
+        }
+        if (questaoAtual.nome == "questaoFrutaRuim"){
+            alterarVida("perde")
         }
     }
 }
