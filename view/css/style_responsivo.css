@@ -24,4 +24,8 @@
     .imagem_75{
         display: block;
     }
+
+    progress{
+        max-width: 75px;
+    }
 }
