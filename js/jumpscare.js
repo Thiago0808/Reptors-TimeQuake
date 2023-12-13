@@ -6,7 +6,6 @@ jumpscareUsados= [];
 
 function ativarJumpscare(){
     sorteado = sortearJumpscare()
-
     body.classList.add("bloquear")
     divJumpscare.style.display="block"
     imgJumpscare.src = "view/img/jumpscare/jumpscare"+sorteado+".png"

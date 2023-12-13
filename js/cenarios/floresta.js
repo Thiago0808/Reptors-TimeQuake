@@ -9,9 +9,16 @@ questaoAtual = {nome: "questaoInicial", titulo: "O Tempo é o seu pior inimigo a
 var questaoCaverna = {nome: "questaoCaverna", titulo: "Pedras ou folhas acima de sua cabeça", botao1: "Entrar na caverna para ser seu abrigo", botao2: "Ignorar a caverna e continuar explorando", texto: "Você avista uma caverna não muito distante de você, na qual pode ser um bom abrigo para você se instalar nos próximos dias. Entretanto, as criaturas da selva podem terem pensado a mesma coisa que você. Você não aguenta mais o frio que o ar livre lhe proporciona, mas teme que, o que tenha lá dentro, seja pior do que aqui fora. Você irá:",}
 var questaoInseto = {nome:"questaoInseto", titulo: "PERIGO extremamente próximo", botao1: "Pegar o inseto na mão, evitando irritar-lo", botao2: "Bater no inseto, para matá-lo de uma vez", texto: "Você sente um formigamentos em suas costas. Você sabe que algum inseto pode ter entrado em sua camisa. Neste ambiente hostil, você sabe que poderá ser desde uma formiga inofensiva até uma terrível aranha venenosa. Você terá que elaborar uma estrátegia para preparar-se para o o que der e vier. Você irá:" };
 var questaoBarulho = {nome: "questaoBarulho", titulo: "a melodia da selva", botao1: "Ir investigar. Alguma hora irá precisar caçar", botao2: "Afastar-se. Seu medo é maior que sua fome", texto: "Você ouve um barulho estranho atrás das árvores que estão mais adiante. Ao mesmo tempo que você teme que seja um animal feroz, você possui esperança de ser um bicho que poderá servir como alimentação. Você resolve:",}
+var questaoPerigo = {nome: "questaoPerigo", titulo: "perigo infinito", botao1: "Continuar deitado, você está muito cansado", botao2: "Levantar, é muito perigoso ficar nessa posição ", texto: "De repente, você é atacado por uma criatura feroz, na qual você tanto admirava. Você cai para trás e fecha os olhos, esperando o pior. Seu medo superou sua inteligência e instinto de sobrevivência. Por sorte, ao abrir os olhos, a criatura tinha sumido. Você ainda fica deitado no chão, cansado da situação que se envolveu. Está valendo a pena tudo isso? Acho que não. Mas você precisa continuar. Você irá:",}
 
-conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho]
+conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo]
 norteadorUsados = []
+
+
+var questaoDormiu = {nome: "questaoDormiu", titulo: "o pior sono de sua vida", botao1: "Ignorar a picada e continuar explorando", botao2: "Pegar algumas frutas, na esperança que elas te façam melhorar", texto: "Você acaba dormindo sem querer. Você acorda apenas três horas depois, muito desonrientado. Você sente que sua mão está dormente. Ao olhar ela, havia um inseto impregnado em sua pele. No desespero, você arranca ele e o joga para longe. Vocẽ está enjoado e confuso. Por causa disso, você conclui que o inseto era venenoso. Você irá:",}
+
+conjuntoSono = [questaoDormiu]
+sonoUsados = []
 
 
 var questaoCoelho = {nome: "questaoCoelho", titulo: "A curiosidade, às vezes, salva", botao1: "Andar em direção ao rio, em procura de mantimentos", botao2: "Andar em direção contrária do rio, em procura de mantimentos", texto: "Você encontra um pequeno coelho indefeso. Você rapidamente pega o animal e o assa em uma fogueira improvisada. Quem diria que, para alguém como você, fosse útil possuir esses conhecimentos. Na verdade, coelhos existiam nessa época? Não importa. O que importa é que você irá agora:",}
@@ -56,6 +63,14 @@ function ativarConjuntoFloresta(botao){
                 cnf() // Controlador das questões Norteadoras da Floresta
             }
         }
+        else if (questaoAtual.nome == "questaoPerigo"){
+            if (botao == "botao1"){
+                csf() // Controlador das questões de Sono da Floresta
+            }
+            else{
+                cnf() // Controlador das questões Norteadoras da Floresta
+            }
+        }
     }
 }
  
@@ -74,25 +89,34 @@ function cif(){
     alterarTexto(questao)
     questaoAtual = questao
     conjuntoAtual = "conjuntoInseto"
+    consequenciasFloresta(questao)
 }
 
 function cbf(){
     sorteado = sortearQuestao(conjuntoBarulho.length, barulhoUsados)
-    console.log(sorteado)
-
     questao = conjuntoBarulho[sorteado]
     alterarTexto(questao)
     questaoAtual = questao
     conjuntoAtual = "conjuntoBarulho"
-    console.log(questaoAtual.nome)
+    consequenciasFloresta(questao)
+}
+
+function csf(){
+    sorteado = sortearQuestao(conjuntoSono.length, sonoUsados)
+    questao = conjuntoSono[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoSono"
     consequenciasFloresta(questao)
 }
 
 function consequenciasFloresta(questao){
     if (conjuntoAtual == "conjuntoNorteador"){
-        // if (questaoAtual.nome == "questaoJumpscareBarulho"){
-        //     cnf() // Controlador das questões Norteadoras da Floresta
-        // }
+        if (questaoAtual.nome == "questaoPerigo"){
+            console.log("Oi")
+            alterarSanidade("perde")
+            ativarJumpscare()
+        }
     }
     else if (conjuntoAtual == "conjuntoBarulho"){
         if (questaoAtual.nome == "questaoJumpscareBarulho"){
