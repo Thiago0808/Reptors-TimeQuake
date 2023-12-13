@@ -13,7 +13,6 @@ function mudarCenario(Cenario){
     console.log(imagem)
 
     body.style.backgroundImage = imagem
-    // body.style.backgroundSize = "500px"
 }
 
 

@@ -35,7 +35,7 @@ body{
 /* Titulo */
 h1{
     font-family: Lacquer;
-    font-size: 27px;
+    font-size: 1.8rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -49,7 +49,7 @@ p{
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 27px; 
+    line-height: 1.7rem; 
 }
 
 .opcoes{
@@ -71,7 +71,6 @@ button{
     font-size: 1.1rem;
     font-style: normal;
     font-weight: 700;
-    line-height: 28px; 
     cursor: pointer;
 }
 
@@ -79,7 +78,6 @@ button{
     transform: scale(1.09);
     transition: 100ms linear; 
 }
-
 
 .info{
     display: flex;
@@ -137,7 +135,7 @@ progress {
 h3{
     color: #FFF;
     font-family: Lacquer;
-    font-size: 28px;
+    font-size: 1.6rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -155,7 +153,7 @@ h3{
 /* Dia */
 h2{
     font-family: Lacquer;
-    font-size: 84px;
+    font-size: 5rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -181,7 +179,3 @@ h2{
     text-align: center;
 }
 
-/* Áudio */
-.audio{
-    /* display: none; */
-}
