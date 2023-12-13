@@ -82,7 +82,6 @@ button{
 .info{
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
     margin-left: 6%;
     margin-right: 6%;
     margin-bottom: 90px;
@@ -190,9 +189,5 @@ h2{
     z-index: 2; 
     margin: auto;
     text-align: center;
-}
-
-.audio{
-    display: none;
 }
 
