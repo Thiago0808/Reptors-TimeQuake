@@ -86,7 +86,7 @@ button{
     margin-top: 10px;
     margin-left: 6%;
     margin-right: 6%;
-    margin-bottom: 90px;
+    margin-bottom: 10px;
     align-items: flex-end;
 }
 
@@ -193,4 +193,6 @@ h2{
     text-align: center;
 }
 
-
+.audio{
+    display: none;
+}
