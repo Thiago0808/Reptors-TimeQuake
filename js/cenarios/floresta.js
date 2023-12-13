@@ -92,7 +92,7 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto"){
+    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoBarulho"){
         cnf() // Controlador das questões Norteadoras da Floresta
     }
 }
@@ -160,6 +160,9 @@ function consequenciasFloresta(questao){
             alterarSanidade("perde")
             alterarVida("perde")
             ativarJumpscare()
+        }
+        else if(questaoAtual.nome == "questaoCoelho"){
+            alterarVida("ganha")
         }
     }
     else if (conjuntoAtual == "conjuntoFrutas"){
