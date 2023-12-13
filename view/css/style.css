@@ -92,6 +92,7 @@ button{
 
 .som{
     text-align: center;
+    cursor: pointer;
 }
 
 .none{
@@ -103,7 +104,6 @@ button{
     flex-direction: column;
     gap: 50px;
 }
-
 
 /* Barra de Progresso */
 progress{
