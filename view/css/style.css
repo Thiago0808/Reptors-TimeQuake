@@ -89,6 +89,14 @@ button{
     align-items: flex-end;
 }
 
+.som{
+    text-align: center;
+}
+
+.none{
+    display: none;
+}
+
 .barras{
     display: flex;
     flex-direction: column;
@@ -177,5 +185,9 @@ h2{
     z-index: 2; 
     margin: auto;
     text-align: center;
+}
+
+.audio{
+    display: none;
 }
 
