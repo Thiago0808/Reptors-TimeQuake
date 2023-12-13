@@ -16,4 +16,12 @@
     h2{
         font-size: 4.8rem;
     }
+
+    .imagem_100{
+        display: none;
+    }
+
+    .imagem_75{
+        display: block;
+    }
 }

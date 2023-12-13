@@ -150,6 +150,10 @@ h3{
     margin: 0;
 }
 
+.imagem_75{
+    display: none;
+}
+
 .vida, .sanidade{
     display: flex;
     flex-direction: column;
@@ -165,6 +169,7 @@ h2{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin: 0;
 }
 
 .bloquear::before {
