@@ -27,8 +27,8 @@ function escolhaTomada(){
 function mudarDia(){
     dia --;
 
-    if (dia == 0){
-        //Funcção de Finalizar Jogo
+    if (dia == 4){
+        telaFinal()
     }
     else{
         diaAtual.innerHTML = "dia "+dia

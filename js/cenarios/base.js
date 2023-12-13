@@ -93,6 +93,9 @@ for (let i = 0; i < botoes.length; i ++){
             case "caverna":
                 ativarConjuntoCaverna(botoes[i].value)
                 break;
+            case "final":
+                ativarFinal(botoes[i].value)
+                break;
         }
     })
 }
