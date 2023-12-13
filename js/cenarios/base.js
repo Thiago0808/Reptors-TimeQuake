@@ -1,9 +1,22 @@
+body = document.querySelector("body")
 titulo = document.getElementById("titulo")
 texto = document.getElementById("texto")
 botao1 = document.getElementById("botao1")
 botao2 = document.getElementById("botao2")
 
 botoes = [botao1, botao2]
+
+var cenario = "floresta"
+
+function mudarCenario(Cenario){
+
+    imagem = "url(view/img/cenarios/cenario"+Cenario+".jpg) ;"
+    //console.log(imagem)
+
+    body.style.backgroundImage = imagem
+    body.style.backgroundSize = "500px"
+}
+
 
 function removerElementosValor(array, valor) {
     var i = array.length;

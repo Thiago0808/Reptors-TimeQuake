@@ -1,4 +1,3 @@
-cenario = "floresta"
 conjuntoAtual = "conjuntoNorteador"
 questaoAtual = {nome: "questaoInicial", titulo: "O Tempo é o seu pior inimigo agora", botao1: "Você ficará onde está, com medo de explorar as redondezas", botao2: "Você irá explorar a selva, em busca de mantimentos", texto: "Você estava em 2131, testando a nova versão de sua máquina de tempo. A segurança não era algo que você priorizava. Ao realizar a viagem no tempo, você foi parar há 100 milhões de anos atrás. A máquina sofreu graves danos no processo, além de agravar ainda mais seus problemas neurológicos, o que te fez acordar apenas 5 dias depois de sua chegada a este mundo estranho. A máquina está tão danificada que está voltando no passado lentamente, de dia em dia. Você percebe que precisa sobreviver até o “primeiro dia”, ou seja, até a data em que você viajou para essa linha do tempo pare reverter o processo. Para isso, você deve manter no minímo 60% de sua vida e sanidade até lá. Você é sábio, sabe quais criaturas habitam nesse espaço-tempo. Ou, pelo menos, acha que sabe.",}
 
@@ -30,7 +29,7 @@ insetoUsados = []
 
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
-        if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoCaverna"){
+        if (questaoAtual.nome == "questaoInicial"){
             cnf() // Controlador das questões Norteadoras da Floresta
         }
         else if (questaoAtual.nome == "questaoInseto"){
@@ -44,6 +43,14 @@ function ativarConjuntoFloresta(botao){
         else if (questaoAtual.nome == "questaoBarulho"){
             if (botao == "botao1"){
                 cbf() // Controlador das questões de Barulho da Floresta
+            }
+            else{
+                cnf() // Controlador das questões Norteadoras da Floresta
+            }
+        }
+        else if (questaoAtual.nome == "questaoCaverna"){
+            if (botao == "botao1"){
+                mudarCenario("Caverna")
             }
             else{
                 cnf() // Controlador das questões Norteadoras da Floresta
