@@ -10,8 +10,9 @@ var questaoCaverna = {nome: "questaoCaverna", titulo: "Pedras ou folhas acima de
 var questaoInseto = {nome:"questaoInseto", titulo: "PERIGO extremamente próximo", botao1: "Pegar o inseto na mão, evitando irritar-lo", botao2: "Bater no inseto, para matá-lo de uma vez", texto: "Você sente um formigamentos em suas costas. Você sabe que algum inseto pode ter entrado em sua camisa. Neste ambiente hostil, você sabe que poderá ser desde uma formiga inofensiva até uma terrível aranha venenosa. Você terá que elaborar uma estrátegia para preparar-se para o o que der e vier. Você irá:" };
 var questaoBarulho = {nome: "questaoBarulho", titulo: "a melodia da selva", botao1: "Ir investigar. Alguma hora irá precisar caçar", botao2: "Afastar-se. Seu medo é maior que sua fome", texto: "Você ouve um barulho estranho atrás das árvores que estão mais adiante. Ao mesmo tempo que você teme que seja um animal feroz, você possui esperança de ser um bicho que poderá servir como alimentação. Você resolve:",}
 var questaoPerigo = {nome: "questaoPerigo", titulo: "perigo infinito", botao1: "Continuar deitado, você está muito cansado", botao2: "Levantar, é muito perigoso ficar nessa posição ", texto: "De repente, você é atacado por uma criatura feroz, na qual você tanto admirava. Você cai para trás e fecha os olhos, esperando o pior. Seu medo superou sua inteligência e instinto de sobrevivência. Por sorte, ao abrir os olhos, a criatura tinha sumido. Você ainda fica deitado no chão, cansado da situação que se envolveu. Está valendo a pena tudo isso? Acho que não. Mas você precisa continuar. Você irá:",}
+var questaoCaixote = {nome: "Caixote", titulo: "Algo familiar", botao1: "Olhar dentro da caixa, para saber se há algo útil dentro", botao2: "Afastar-se, pois a caixa não lhe interessa mais ", texto: "Você encontra diante de si seu grande caixote de mental entre as árvores. Que pena que não é mais possível usar essa caixa como pretendia antes. Você irá:",}
 
-conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo]
+conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote]
 norteadorUsados = []
 
 
@@ -76,6 +77,14 @@ function ativarConjuntoFloresta(botao){
         else if (questaoAtual.nome == "questaoPerigo"){
             if (botao == "botao1"){
                 csf() // Controlador das questões de Sono da Floresta
+            }
+            else{
+                cnf() // Controlador das questões Norteadoras da Floresta
+            }
+        }
+        else if (questaoAtual.nome == "questaoCaixote"){
+            if (botao == "botao1"){
+                //ccf() // Controlador das questões de Caixote da Floresta
             }
             else{
                 cnf() // Controlador das questões Norteadoras da Floresta
