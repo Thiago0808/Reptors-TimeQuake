@@ -86,7 +86,7 @@ for (let i = 0; i < botoes.length; i ++){
                 ativarConjuntoFloresta(botoes[i].value)
                 break;
             case "caverna":
-                //Funcao de ir pra Caverna
+                ativarConjuntoCaverna(botoes[i].value)
                 break;
         }
     })
