@@ -15,6 +15,7 @@ body{
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    max-height: 100vh;
 }
 
 .historia{
@@ -82,6 +83,7 @@ button{
 .info{
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
     margin-left: 6%;
     margin-right: 6%;
     margin-bottom: 90px;
@@ -190,4 +192,5 @@ h2{
     margin: auto;
     text-align: center;
 }
+
 
