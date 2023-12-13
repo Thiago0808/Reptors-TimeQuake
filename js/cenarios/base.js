@@ -9,12 +9,11 @@ botoes = [botao1, botao2]
 var cenario = "floresta"
 
 function mudarCenario(Cenario){
-
-    imagem = "url(view/img/cenarios/cenario"+Cenario+".jpg) ;"
-    //console.log(imagem)
+    imagem = "url(view/img/cenarios/cenario"+Cenario+".jpg)"
+    console.log(imagem)
 
     body.style.backgroundImage = imagem
-    body.style.backgroundSize = "500px"
+    // body.style.backgroundSize = "500px"
 }
 
 
@@ -80,9 +79,6 @@ function alterarTexto(questao){
     botao1.innerHTML = questao.botao1
     botao2.innerHTML = questao.botao2
 }
-
-
-
 
 for (let i = 0; i < botoes.length; i ++){
     botoes[i].addEventListener("click", function(){

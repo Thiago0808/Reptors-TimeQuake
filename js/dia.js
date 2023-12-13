@@ -6,19 +6,19 @@ escolhasRestantes = 15
 function escolhaTomada(){
     escolhasRestantes --;
 
-    if (escolhasRestantes==12){
+    if (escolhasRestantes == 12){
         mudarDia()
     }
-    else if (escolhasRestantes==9){
+    else if (escolhasRestantes == 9){
         mudarDia()
     }
-    else if (escolhasRestantes==6){
+    else if (escolhasRestantes == 6){
         mudarDia()
     }
-    else if (escolhasRestantes==3){
+    else if (escolhasRestantes == 3){
         mudarDia()
     }
-    else if (escolhasRestantes==0){
+    else if (escolhasRestantes == 0){
         mudarDia()
     }
 
