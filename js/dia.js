@@ -32,6 +32,9 @@ function mudarDia(){
     if (dia == 0){
         cenario = "final"
     }
+    else{
+        diaAtual.innerHTML = "dia "+dia
+    }
 
 
 }
