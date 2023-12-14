@@ -57,6 +57,12 @@ conjuntoFrutas = [questaoFrutaBoa, questaoFrutaRuim]
 frutasUsados = []
 
 
+var questaoCaixoteFalha = {nome: "questaoCaixoteFalha", titulo: "cumprindo sua função", botao1: "Ir para a esquerda. Você quer explorar mais", botao2: "Ir para a direita. Talvez tenha algo interessante nessa direção", texto: "Você tenta abrir o caixote, em vão. Ela é muito resistente. Você se impressiona que, neste mundo, nada dá certo para você. Cansado e frustado, você irá:",}
+
+conjuntoCaixote = [questaoCaixoteFalha]
+caixoteUsados = []
+
+
 
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
@@ -97,7 +103,7 @@ function ativarConjuntoFloresta(botao){
         }
         else if (questaoAtual.nome == "questaoCaixote"){
             if (botao == "botao1"){
-                //ccf() // Controlador das questões de Caixote da Floresta
+                ccf() // Controlador das questões de Caixote da Floresta
             }
             else{
                 cnf() // Controlador das questões Norteadoras da Floresta
@@ -135,7 +141,7 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas"){
+    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote"){
         cnf() // Controlador das questões Norteadoras da Floresta
     }
     
@@ -174,6 +180,15 @@ function csf(){
     alterarTexto(questao)
     questaoAtual = questao
     conjuntoAtual = "conjuntoSono"
+    consequenciasFloresta(questao)
+}
+
+function ccf(){
+    sorteado = sortearQuestao(conjuntoCaixote.length, caixoteUsados)
+    questao = conjuntoCaixote[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoCaixote"
     consequenciasFloresta(questao)
 }
 
