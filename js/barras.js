@@ -16,7 +16,7 @@ function verificarVida(){
 }
 
 function alterarSanidade(alteracao){
-    if (alteracao == "ganha"){
+    if (alteracao == "ganha" && verificarSanidade()<100){
         quantidadeSanidade += 10;
     }
     else  if (alteracao == "perde"){
@@ -33,7 +33,7 @@ function alterarSanidade(alteracao){
 }
 
 function alterarVida(alteracao){
-    if (alteracao == "ganha"){
+    if (alteracao == "ganha" && verificarVida()<100){
         quantidadeVida += 10;
     }
     else  if (alteracao == "perde"){
