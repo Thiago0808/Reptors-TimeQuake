@@ -2,7 +2,7 @@ let body = document.querySelector("body")
 let divJumpscare = document.getElementById("divJumpscare")
 let imgJumpscare = document.getElementById("imgJumpscare")
 
-jumpscareUsados= [];
+jumpscareUsados= [0];
 
 function ativarJumpscare(){
     sorteado = sortearJumpscare()
@@ -12,13 +12,25 @@ function ativarJumpscare(){
 }
 
 function sortearJumpscare(){
-    sorteado = Math.ceil(Math.random()*5)
+    permitidos = numerosPermitidos(5, jumpscareUsados);
 
-    for (let i=0; i<jumpscareUsados.length; i++){
-        if (jumpscareUsados[i] = sorteado){
-            sortearJumpscare()
+
+
+
+    if (permitidos.length>0){
+        condicao = true
+        while (condicao){
+            sorteado = Math.ceil(Math.random()*5)
+            sorteado --;
+            for (let i=0; i<permitidos.length; i++){
+                //console.log(usados[i], sorteado)
+                if (permitidos[i] == sorteado){
+                    condicao = false
+                }
+            }
         }
     }
+
     jumpscareUsados.push(sorteado);
     return sorteado
 }

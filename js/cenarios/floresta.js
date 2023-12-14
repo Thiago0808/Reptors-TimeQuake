@@ -12,8 +12,9 @@ var questaoBarulho = {nome: "questaoBarulho", titulo: "a melodia da selva", bota
 var questaoPerigo = {nome: "questaoPerigo", titulo: "perigo infinito", botao1: "Continuar deitado, você está muito cansado", botao2: "Levantar, é muito perigoso ficar nessa posição ", texto: "De repente, você é atacado por uma criatura feroz, na qual você tanto admirava. Você cai para trás e fecha os olhos, esperando o pior. Seu medo superou sua inteligência e instinto de sobrevivência. Por sorte, ao abrir os olhos, a criatura tinha sumido. Você ainda fica deitado no chão, cansado da situação que se envolveu. Está valendo a pena tudo isso? Acho que não. Mas você precisa continuar. Você irá:",}
 var questaoCaixote = {nome: "questaoCaixote", titulo: "Algo familiar", botao1: "Olhar dentro da caixa, para saber se há algo útil dentro", botao2: "Afastar-se, pois a caixa não lhe interessa mais", texto: "Você encontra diante de si seu grande caixote de mental entre as árvores. Que pena que não é mais possível usar essa caixa como pretendia antes. Você irá:",}
 var questaoRefugio = {nome: "questaoRefugio", titulo: "Em Busca de Refúgio", botao1: "Seguir em frente, por dentro da floresta", botao2: "Seguir a direita, em direção ao rio", texto: "Você sente a urgente necessidade de achar um abrigo para passar as próximas horas. O ambiente demostra nenhum sinal de que possa haver um lugar seguro. Mesmo assim, você terá que optar por algum caminho para alcançar seu objetivo. Você irá: ",}
+var questaoBatalha = {nome: "questaoBatalha", titulo: "dentes da morte", botao1: "Pegar um pedaço de madeira e bater na criatura", botao2: "Pegar uma pedra e bater na criatura", texto: "De repente, você é atacado por uma criatura feroz, na qual, com seus dentes afiados, morde um dedo de sua mão e o arranca fora. Você grita de dor. A criatura está pronta para se divertir com mais partes sua. Você irá:",}
 
-conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio]
+conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha]
 norteadorUsados = []
 
 
@@ -61,6 +62,12 @@ var questaoCaixoteFalha = {nome: "questaoCaixoteFalha", titulo: "cumprindo sua f
 
 conjuntoCaixote = [questaoCaixoteFalha]
 caixoteUsados = []
+
+
+var questaoBatalha2 = {nome: "questaoBatalha2", titulo: "criaturas da morte", botao1: "Continuar correndo, para ficar mais longe ainda da criatura", botao2: "Seguir em frente, o perigo já passou", texto: "Você consegue bater na criatura, no entanto, outra surge para te atacar. Ela fica em cima de você, tentando arrancar uma parte de você. Você bate nessa criatura e ela recua, rosnando de dor. Você consegue se afastar e fugir para longe da criatura. Machucado e arfante, você irá:",}
+
+conjuntoBatalha = [questaoBatalha2]
+batalhaUsados = []
 
 
 
@@ -117,6 +124,9 @@ function ativarConjuntoFloresta(botao){
                 //Ir pro Rio
             }
         }
+        else if (questaoAtual.nome == "questaoBatalha"){
+            cbaf() // Controlador das questões de Batalha da Floresta
+        }
     }
     else if (conjuntoAtual == "conjuntoSono"){
         if (questaoAtual.nome == "questaoDormiu"){
@@ -141,7 +151,7 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote"){
+    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha"){
         cnf() // Controlador das questões Norteadoras da Floresta
     }
     
@@ -220,11 +230,24 @@ function cfof(){
     consequenciasFloresta(questao)
 }
 
+function cbaf(){
+    sorteado = sortearQuestao(conjuntoBatalha.length, batalhaUsados)
+    questao = conjuntoBatalha[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoBatalha"
+    consequenciasFloresta(questao)
+}
+
 function consequenciasFloresta(questao){
     if (conjuntoAtual == "conjuntoNorteador"){
         if (questaoAtual.nome == "questaoPerigo"){
-            console.log("Oi")
             alterarSanidade("perde")
+            ativarJumpscare()
+        }
+        if (questaoAtual.nome == "questaoBatalha"){
+            alterarSanidade("perde")
+            alterarVida("perde")
             ativarJumpscare()
         }
     }
@@ -254,6 +277,13 @@ function consequenciasFloresta(questao){
     else if (conjuntoAtual == "conjuntoFolhas"){
         if (questaoAtual.nome == "questaoFolhas"){
             alterarVida("perde")
+        }
+    }
+    else if (conjuntoAtual == "conjuntoBatalha"){
+        if (questaoAtual.nome == "questaoBatalha2"){
+            alterarSanidade("perde")
+            alterarVida("perde")
+            ativarJumpscare()
         }
     }
 }
