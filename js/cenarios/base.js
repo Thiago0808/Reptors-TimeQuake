@@ -106,7 +106,10 @@ for (let i = 0; i < botoes.length; i ++){
                 ativarConjuntoCaverna(botoes[i].value)
                 break;
             case "final":
-                ativarFinal(botoes[i].value)
+                ativarFinal()
+                break;
+            case "ultimo":
+                ativarUltimo(botoes[i].value)
                 break;
         }
     })

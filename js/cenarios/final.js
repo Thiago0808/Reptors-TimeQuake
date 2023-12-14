@@ -6,8 +6,8 @@ var finalVida = {nome: "finalVida", titulo: "apenas ossos", botao1: "Reiniciar. 
 var finalSanidade = {nome: "finalSanidade", titulo: "traumas por todos os lados", botao1: "Reiniciar. Você quer descobrir outros caminhos", botao2: "Desistir. Para que sofrer mais?", texto: "Você chegou ao dia em que voltaria para sua casa. Você se aproxima da máquina do tempo para poder voltar a sua antiga vida, mas você está confuso demais para conseguir usar a máquina. As vozes em sua cabeça te perturbam cada vez mais e você não consegue mais distinguir a realidade da fantasia. Você tentou voltar a sua realidade, mas você está louco demais para conseguir isso. Você ficará preso neste mundo hostil, até o fim de sua vida, o que não demorará. ",}
 
 
-function telaFinal(){
-    cenario = "final"
+function ativarFinal(){
+    cenario = "ultimo"
     if (verificarSanidade()>60 && verificarVida()>60){
         alterarTexto(finalBom)
         mudarCenario("FinalBom")
@@ -25,11 +25,11 @@ function telaFinal(){
     }
 }
 
-function ativarFinal(botao){
+function ativarUltimo(botao){
     if (botao == "botao1"){
         location.reload();
     }
-    else{
+    else if (botao == "botao2"){
         window.close()
     }
 

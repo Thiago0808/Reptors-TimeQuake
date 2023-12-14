@@ -26,12 +26,12 @@ function escolhaTomada(){
 
 function mudarDia(){
     dia --;
+    diaAtual.innerHTML = "dia "+dia
+
 
     if (dia == 0){
-        telaFinal()
+        cenario = "final"
     }
-    else{
-        diaAtual.innerHTML = "dia "+dia
-    }
+
 
 }
