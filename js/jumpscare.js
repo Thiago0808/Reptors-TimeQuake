@@ -8,11 +8,11 @@ function ativarJumpscare(){
     sorteado = sortearJumpscare()
     body.classList.add("bloquear")
     divJumpscare.style.display="block"
-    imgJumpscare.src = "view/img/jumpscare/jumpscare"+sorteado+".png"
+    imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
 }
 
 function sortearJumpscare(){
-    sorteado = Math.ceil(Math.random()*1)
+    sorteado = Math.ceil(Math.random()*5)
 
     for (let i=0; i<jumpscareUsados.length; i++){
         if (jumpscareUsados[i] = sorteado){
@@ -26,5 +26,4 @@ function sortearJumpscare(){
 divJumpscare.addEventListener("click", function(){
     divJumpscare.style.display="none"
     body.classList.remove("bloquear")
-    //Função de ir pra próxima questão
 })

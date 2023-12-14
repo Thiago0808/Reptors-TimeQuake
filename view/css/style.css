@@ -193,6 +193,10 @@ h2{
     text-align: center;
 }
 
+.divJumpscare img{
+    max-height: 100vh;
+}
+
 .audio{
     display: none;
 }
