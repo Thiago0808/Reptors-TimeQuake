@@ -10,7 +10,7 @@ var questaoCaverna = {nome: "questaoCaverna", titulo: "Pedras ou folhas acima de
 var questaoInseto = {nome:"questaoInseto", titulo: "PERIGO extremamente próximo", botao1: "Pegar o inseto na mão, evitando irritar-lo", botao2: "Bater no inseto, para matá-lo de uma vez", texto: "Você sente um formigamentos em suas costas. Você sabe que algum inseto pode ter entrado em sua camisa. Neste ambiente hostil, você sabe que poderá ser desde uma formiga inofensiva até uma terrível aranha venenosa. Você terá que elaborar uma estrátegia para preparar-se para o o que der e vier. Você irá:" };
 var questaoBarulho = {nome: "questaoBarulho", titulo: "a melodia da selva", botao1: "Ir investigar. Alguma hora irá precisar caçar", botao2: "Afastar-se. Seu medo é maior que sua fome", texto: "Você ouve um barulho estranho atrás das árvores que estão mais adiante. Ao mesmo tempo que você teme que seja um animal feroz, você possui esperança de ser um bicho que poderá servir como alimentação. Você resolve:",}
 var questaoPerigo = {nome: "questaoPerigo", titulo: "perigo infinito", botao1: "Continuar deitado, você está muito cansado", botao2: "Levantar, é muito perigoso ficar nessa posição ", texto: "De repente, você é atacado por uma criatura feroz, na qual você tanto admirava. Você cai para trás e fecha os olhos, esperando o pior. Seu medo superou sua inteligência e instinto de sobrevivência. Por sorte, ao abrir os olhos, a criatura tinha sumido. Você ainda fica deitado no chão, cansado da situação que se envolveu. Está valendo a pena tudo isso? Acho que não. Mas você precisa continuar. Você irá:",}
-var questaoCaixote = {nome: "questaoCaixote", titulo: "Algo familiar", botao1: "Olhar dentro da caixa, para saber se há algo útil dentro", botao2: "Afastar-se, pois a caixa não lhe interessa mais ", texto: "Você encontra diante de si seu grande caixote de mental entre as árvores. Que pena que não é mais possível usar essa caixa como pretendia antes. Você irá:",}
+var questaoCaixote = {nome: "questaoCaixote", titulo: "Algo familiar", botao1: "Olhar dentro da caixa, para saber se há algo útil dentro", botao2: "Afastar-se, pois a caixa não lhe interessa mais", texto: "Você encontra diante de si seu grande caixote de mental entre as árvores. Que pena que não é mais possível usar essa caixa como pretendia antes. Você irá:",}
 var questaoRefugio = {nome: "questaoRefugio", titulo: "Em Busca de Refúgio", botao1: "Seguir em frente, por dentro da floresta", botao2: "Seguir a direita, em direção ao rio", texto: "Você sente a urgente necessidade de achar um abrigo para passar as próximas horas. O ambiente demostra nenhum sinal de que possa haver um lugar seguro. Mesmo assim, você terá que optar por algum caminho para alcançar seu objetivo. Você irá: ",}
 
 conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio]
@@ -25,6 +25,18 @@ var questaoJumpscareBarulho = {nome: "questaoJumpscareBarulho", titulo: "Por que
 
 conjuntoBarulho = [questaoCoelho, questaoJumpscareBarulho]
 barulhoUsados = []
+
+
+var questaoSemRio = {nome: "questaoSemRio", titulo: "lugar sem esperança", botao1: "Voltar ao caminho que tinha feito", botao2: "Continuar em frente, em direção ao vento", texto: "Você acaba não encontrando um rio para lavar sua ferida. Você só reza que o machucado não piore. Seria tão bom que seu kit médico tivesse viajado no tempo junto com você para resolver esse problema. Você só tem a floresta, e a floresta tem milhares de criaturas misteriosas, prontas para dar um fim à sua vida. Enfim, você não pode fazer nada a respeito. Você junta um pouco da força que ainda possui e decide que irá:",}
+
+conjuntoSemRio = [questaoSemRio]
+semRioUsados = []
+
+
+var questaoFolhas = {nome: "questaoFolhas", titulo: "inferno verde", botao1: "Tomar rumo à direita, para explorar mais o terreno", botao2: "Tomar rumo à direita, para explorar mais o terreno", texto: "Você tenta arrancar algumas folhas, mas acaba colocando suas mãos em espinhos. Suas mãos ficam em total sangue. Você grita de dor e raiva. Você não aguenta mais o ambiente em que você está, cheio de perigos e surpresas desagradáveis. Mas, você quer sobreviver. Para isso, você precisa achar mantimentos logo. Você irá:",}
+
+conjuntoFolhas = [questaoFolhas]
+folhasUsados = []
 
 
 var questaoAranha = {nome: "questaoAranha", titulo: "agonia de pequenas pernas", botao1: "Seguir em frente, em direção às colinas", botao2: "Sentar um pouco, você precisa descansar", texto: "Uma aranha rapidamente pulou em sua mão, esfregando suas pernas peludas em sua pele. Em desespero, você sacode sua mão, tentando derrubar ela, na qual surte efeito. Por um momento. Ela ligeiramente sobe uma árvore e pula diretamente em seu rosto. Assustado e agoniado, você esfrega suas mãos desesperamente em seu rosto, e a aranha cai novamente no chão, dessa vez indo para longe. Essa pequena criatura aparentou ter gostado de você. Mas agora, você precisará ignorar potenciais “amigos” e continuar seu caminho. Voce irá:",}
@@ -110,9 +122,23 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoBarulho"){
+    else if (conjuntoAtual == "conjuntoBarulho"){
+        if (questaoAtual.nome == "questaoCoelho"){
+            cnf() // Controlador das questões Norteadoras da Floresta
+        }
+        else if (questaoAtual.nome == "questaoJumpscareBarulho"){
+            if (botao == "botao1"){
+                csrf() // Controlador das questões Sem Rio da Floresta
+            }
+            else{
+                cfof() // Controlador das questões de Folhas da Floresta
+            }
+        }
+    }
+    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas"){
         cnf() // Controlador das questões Norteadoras da Floresta
     }
+    
 }
  
 function cnf(){
@@ -160,6 +186,25 @@ function cff(){
     consequenciasFloresta(questao)
 }
 
+function csrf(){
+    sorteado = sortearQuestao(conjuntoSemRio.length, semRioUsados)
+    questao = conjuntoSemRio[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoSemRio"
+    consequenciasFloresta(questao)
+}
+
+
+function cfof(){
+    sorteado = sortearQuestao(conjuntoFolhas.length, folhasUsados)
+    questao = conjuntoFolhas[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoFolhas"
+    consequenciasFloresta(questao)
+}
+
 function consequenciasFloresta(questao){
     if (conjuntoAtual == "conjuntoNorteador"){
         if (questaoAtual.nome == "questaoPerigo"){
@@ -188,6 +233,11 @@ function consequenciasFloresta(questao){
             alterarVida("ganha")
         }
         if (questaoAtual.nome == "questaoFrutaRuim"){
+            alterarVida("perde")
+        }
+    }
+    else if (conjuntoAtual == "conjuntoFolhas"){
+        if (questaoAtual.nome == "questaoFolhas"){
             alterarVida("perde")
         }
     }
