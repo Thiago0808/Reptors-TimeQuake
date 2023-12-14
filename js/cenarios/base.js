@@ -17,6 +17,18 @@ function mudarCenario(local){
         conjuntoAtual = "conjuntoEntrada"
         ativarConjuntoCaverna("inicial")
     }
+    else if (local == "FinalBom"){
+        imagem = "url(view/img/cenarios/cenarioFinalBom.jpg)"
+        body.style.backgroundImage = imagem
+    }
+    else if (local == "FinalVida"){
+        imagem = "url(view/img/cenarios/cenarioFinalVida.jpg)"
+        body.style.backgroundImage = imagem
+    }    
+    else if (local == "FinalSanidade"){
+        imagem = "url(view/img/cenarios/cenarioFinalSanidade.jpg)"
+        body.style.backgroundImage = imagem
+    }
 }
 
 

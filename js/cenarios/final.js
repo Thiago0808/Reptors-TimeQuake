@@ -10,12 +10,15 @@ function telaFinal(){
     cenario = "final"
     if (verificarSanidade()>60 && verificarVida()>60){
         alterarTexto(finalBom)
+        mudarCenario("FinalBom")
     }
     else if (verificarSanidade()>60 && verificarVida()<60){
         alterarTexto(finalVida)
+        mudarCenario("FinalVida")
     }
     else if(verificarSanidade()<60 && verificarVida()>60){
         alterarTexto(finalSanidade)
+        mudarCenario("FinalSanidade")
     }
     else{
         console.log("Tela de Ambos dando ruim")

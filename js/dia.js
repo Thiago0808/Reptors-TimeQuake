@@ -27,7 +27,7 @@ function escolhaTomada(){
 function mudarDia(){
     dia --;
 
-    if (dia == 4){
+    if (dia == 0){
         telaFinal()
     }
     else{
