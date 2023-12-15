@@ -10,6 +10,7 @@ function ativarJumpscare(){
     divJumpscare.style.display="block"
     imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
     ativarSomJumpscare()
+    finalizarJumpscare()
 }
 
 function sortearJumpscare(){
@@ -36,7 +37,14 @@ function sortearJumpscare(){
     return sorteado
 }
 
-divJumpscare.addEventListener("click", function(){
-    divJumpscare.style.display="none"
-    body.classList.remove("bloquear")
-})
+function finalizarJumpscare(){
+    audioJumpscare.onloadeddata = function() {
+        var duracao = (audioJumpscare.duration*1000)
+        setTimeout(() => {
+            divJumpscare.style.display="none"
+            body.classList.remove("bloquear")
+        }, duracao);
+    };	
+
+
+}

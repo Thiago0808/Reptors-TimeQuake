@@ -197,6 +197,6 @@ h2{
     max-height: 100vh;
 }
 
-.audio{
+.audio, #somJumpscare{
     display: none;
 }
