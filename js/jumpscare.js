@@ -9,6 +9,7 @@ function ativarJumpscare(){
     body.classList.add("bloquear")
     divJumpscare.style.display="block"
     imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
+    ativarSomJumpscare()
 }
 
 function sortearJumpscare(){
