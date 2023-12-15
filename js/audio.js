@@ -48,6 +48,7 @@ function sortearSom(){
             }
         }
     }
+    console.log("Áudio Nº: "+sorteado)
 
     sonsUsados.push(sorteado);
     return sorteado
