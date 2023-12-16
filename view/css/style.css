@@ -227,7 +227,7 @@ h2{
     margin-right: 80px;
 }
 
-a{
+.botoes a, .voltar a{
     display: flex;
     justify-content: center;
     align-items: center;
