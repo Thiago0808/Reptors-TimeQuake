@@ -15,8 +15,9 @@ var questaoRefugio = {nome: "questaoRefugio", titulo: "Em Busca de Refúgio", bo
 var questaoBatalha = {nome: "questaoBatalha", titulo: "dentes da morte", botao1: "Pegar um pedaço de madeira e bater na criatura", botao2: "Pegar uma pedra e bater na criatura", texto: "De repente, você é atacado por uma criatura feroz, na qual, com seus dentes afiados, morde um dedo de sua mão e o arranca fora. Você grita de dor. A criatura está pronta para se divertir com mais partes sua. Você irá:",}
 var questaoPonte = {nome: "questaoPonte", titulo: "do outro lado", botao1: "Atravessar a ponte, determinado a descobrir o que há do outro lado ", botao2: "Ficar onde está. Você não sabe o nível de segurança desta ponte", texto: "Você inesperadamente encontra uma ponte de madeira entre dois vales, com alguns buracos em sua estrutura. Você esfrega os olhos, tentando ter a certeza que seus olhos não estão lhe pregando uma peça. Como uma ponte de madeira existe neste período histórico? Você acha que a máquina de tempo afetou mais a realidade do que imaginava, ou seus problemas mentais estão ainda piores. Com medo e incerteza, você irá:",}
 var questaoSilhueta = {nome: "questaoSilhueta", titulo: "Susto estranho", botao1: "Explorar as redondezas, tentando encontrar a criatura", botao2: "Seguir pela direita. Você acha que a criatura desapareceu por ali", texto: "A silhueta repentina da criatura, com os olhos vermelhos, apenas encara você, com um olhar sem vida. Após o susto inicial, você percebe que a criatura não te ataca, não rosna e mal se move. De repente, ela desaparece, diante de seus olhos. Confuso, você olha ao redor, procurando a criatura. Ela sumiu, realmente, deixando apenas uma estranha sensação familiar para trás. Você irá:",}
+var questaoMachado = {nome: "questaoMachado", titulo: "Sorte? Ou não?", botao1: "Pegar o machado, para se proteger", botao2: "Ignorar o machado. Você tem medo de sua origem", texto: "Você, inesperadamente, acha um machado no meio dos arbustos. Como existe um machado nesta época? Não há humanos. Pelo menos, não era para ter. Mesmo achando estranho, você irá:",}
 
-conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha, questaoPonte, questaoSilhueta]
+conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha, questaoPonte, questaoSilhueta, questaoMachado]
 norteadorUsados = []
 
 
@@ -70,6 +71,23 @@ var questaoBatalha2 = {nome: "questaoBatalha2", titulo: "criaturas da morte", bo
 
 conjuntoBatalha = [questaoBatalha2]
 batalhaUsados = []
+
+var questaoMachado2 = {nome: "questaoMachado2", titulo: "Os princípios da sobrevivência ", botao1: "Pegar os gravetos perto dos arbustos", botao2: "Pegar os gravetos perto das pedras", texto: "Você tem a ideia de pegar alguns gravetos com o machado para fazer fogueiras futuramente. Você irá:",}
+
+conjuntoMachado = [questaoMachado2]
+machadoUsados = []
+
+var questaoGravetoArbusto = {nome: "questaoGravetoArbusto", titulo: "Alimentando,mas desprotegido", botao1: "Ir na direção dos arbustos, em busca de mais comida", botao2: "Ir na direção das pedras. Pode haver algo lá", texto: "Você está com sorte. Ou não. Além dos gravetos, você encontra algumas frutinhas nos arbustos. Você lembra que são as mesmas que sua colega de trabalho comia no lanche da tarde. Esfomeado, você come várias de uma vez e guarda para depois. Mas, infelizmente, o machado teve seu cabo quebrado ao pegar os gravetos. Só dá para ter sorte de uma coisa de cada vez. Desanimado, mas alimentando, você irá:",}
+
+conjuntoGravetoArbusto = [questaoGravetoArbusto]
+gravetoArbustoUsados = []
+
+
+var questaoGravetoPedras = {nome: "questaoGravetoPedras", titulo: "Azar ou só um ambiente hostil?", botao1: "Ir na direção dos arbustos, em busca de mais comida", botao2: "Ir na direção das pedras. Pode haver algo lá", texto: "Infelizmente, ao pegar os gravetos, rompe o cabo do machado. Você se sente um completo azarado. Desanimado e cansado, você irá:",}
+
+conjuntoGravetoPedras = [questaoGravetoPedras]
+gravetoPedrasUsados = []
+
 
 
 
@@ -129,6 +147,14 @@ function ativarConjuntoFloresta(botao){
         else if (questaoAtual.nome == "questaoBatalha"){
             cbaf() // Controlador das questões de Batalha da Floresta
         }
+        else if (questaoAtual.nome == "questaoMachado"){
+            if (botao == "botao1"){
+                cmf() // Controlador das questões de Machado da Floresta
+            }
+            else{
+                cnf() // Controlador das questões Norteadoras da Floresta
+            }
+        }
     }
     else if (conjuntoAtual == "conjuntoSono"){
         if (questaoAtual.nome == "questaoDormiu"){
@@ -153,7 +179,17 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha"){
+    else if (conjuntoAtual == "conjuntoMachado"){
+        if (questaoAtual.nome == "questaoMachado2"){
+            if (botao == "botao1"){
+                cgaf() // Controlador das questões de Gravetos em Arbustos da Floresta
+            }
+            else{
+                cgpf() // Controlador das questões de Gravetos em Pedras da Floresta
+            }
+        }
+    }
+    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha" || conjuntoAtual == "conjuntoGravetoArbusto" || conjuntoAtual == "conjuntoGravetoPedras"){
         cnf() // Controlador das questões Norteadoras da Floresta
     }
     
@@ -241,6 +277,33 @@ function cbaf(){
     consequenciasFloresta(questao)
 }
 
+function cmf(){
+    sorteado = sortearQuestao(conjuntoMachado.length, machadoUsados)
+    questao = conjuntoMachado[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoMachado"
+    consequenciasFloresta(questao)
+}
+
+function cgaf(){
+    sorteado = sortearQuestao(conjuntoGravetoArbusto.length, gravetoArbustoUsados)
+    questao = conjuntoGravetoArbusto[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoGravetoArbusto"
+    consequenciasFloresta(questao)
+}
+
+function cgpf(){
+    sorteado = sortearQuestao(conjuntoGravetoPedras.length, gravetoPedrasUsados)
+    questao = conjuntoGravetoPedras[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoGravetoPedras"
+    consequenciasFloresta(questao)
+}
+
 function consequenciasFloresta(questao){
     if (conjuntoAtual == "conjuntoNorteador"){
         if (questaoAtual.nome == "questaoPerigo"){
@@ -290,6 +353,11 @@ function consequenciasFloresta(questao){
             alterarSanidade("perde")
             alterarVida("perde")
             ativarJumpscare()
+        }
+    }
+    else if (conjuntoAtual == "conjuntoGravetoArbusto"){
+        if (questaoAtual.nome == "questaoGravetoArbusto"){
+            alterarVida("ganha")
         }
     }
 }
