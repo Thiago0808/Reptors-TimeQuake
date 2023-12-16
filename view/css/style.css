@@ -93,6 +93,8 @@ button{
 .som{
     text-align: center;
     cursor: pointer;
+    justify-content: center;
+    display: flex;
 }
 
 .none{
