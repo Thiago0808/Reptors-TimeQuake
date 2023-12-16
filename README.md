@@ -1,5 +1,5 @@
 # Reptor's TimeQuake
-Os criadores , Aline Espindola e Thiago Martins. agradecem por você experimentar esse pequeno projeto: o jogo de Terror sobre dinossauros e viagem no tempo nomeado Reptor's TimeQuake.Todo o desenvolvimento, desde a programação até as interfaces e histórias, foi realizado por nós, enquanto as imagens foram geradas por meio de inteligência artificial, e os efeitos sonoros foram fornecidos pela Pixabay. 
+Os criadores agradecem por você visualizar esse pequeno projeto: o jogo de Terror sobre dinossauros e viagem no tempo nomeado Reptor's TimeQuake.Todo o desenvolvimento, desde a programação até as interfaces e histórias, foi realizado pela nossa equipe, enquanto as imagens foram geradas por meio de inteligência artificial, e os efeitos sonoros foram fornecidos pela Pixabay. 
 
 Esse pequeno jogo foi criado, principalmente, com Javascript. Também utilizamos HTML/CSS, fazendo que o jogo rode inteiramente no nevagador, sem baixar nada. Também utilizamos a biblioteca animate.css, como o próprio nome diz, para colocar essas animações presentes no jogo.
 
