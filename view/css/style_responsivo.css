@@ -36,3 +36,38 @@
         margin-top: 15px;
     }
 }
+
+@media (max-width: 900px) {
+
+    .container, .containerIndex{
+        display: none;
+    }
+
+    body{
+        background-image: url(../img/cenarios/cenarioIndex.png);
+        background-position:top;
+        background-size: cover;
+        height: 100vh;
+    }
+
+    .celular{
+        display: flex;
+        margin: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        gap: 20px;
+    }
+
+    .celular p{
+        color: #FFF;
+        text-align: center;
+        font-family: Lacquer;
+        font-size: 27px;
+        font-style: normal;
+        font-weight: 400;
+        text-decoration-line: underline;
+        margin: 5px;
+    }
+}
