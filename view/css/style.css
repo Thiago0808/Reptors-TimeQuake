@@ -222,3 +222,32 @@ h2{
     justify-content: flex-end;
     margin-right: 80px;
 }
+
+a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 17px;
+    border: 1px solid #FFF;
+    background: rgba(0, 0, 0, 0.50);
+    text-decoration: none;
+}
+
+.botaoIndex{
+    color: #FFF;
+    font-family: Lacquer;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 17px 33px;
+    border: 0;
+}
+
+.botoes{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    gap: 24px;
+}
