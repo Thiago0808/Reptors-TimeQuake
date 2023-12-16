@@ -14,8 +14,9 @@ var questaoCaixote = {nome: "questaoCaixote", titulo: "Algo familiar", botao1: "
 var questaoRefugio = {nome: "questaoRefugio", titulo: "Em Busca de Refúgio", botao1: "Seguir em frente, por dentro da floresta", botao2: "Seguir a direita, em direção ao rio", texto: "Você sente a urgente necessidade de achar um abrigo para passar as próximas horas. O ambiente demostra nenhum sinal de que possa haver um lugar seguro. Mesmo assim, você terá que optar por algum caminho para alcançar seu objetivo. Você irá: ",}
 var questaoBatalha = {nome: "questaoBatalha", titulo: "dentes da morte", botao1: "Pegar um pedaço de madeira e bater na criatura", botao2: "Pegar uma pedra e bater na criatura", texto: "De repente, você é atacado por uma criatura feroz, na qual, com seus dentes afiados, morde um dedo de sua mão e o arranca fora. Você grita de dor. A criatura está pronta para se divertir com mais partes sua. Você irá:",}
 var questaoPonte = {nome: "questaoPonte", titulo: "do outro lado", botao1: "Atravessar a ponte, determinado a descobrir o que há do outro lado ", botao2: "Ficar onde está. Você não sabe o nível de segurança desta ponte", texto: "Você inesperadamente encontra uma ponte de madeira entre dois vales, com alguns buracos em sua estrutura. Você esfrega os olhos, tentando ter a certeza que seus olhos não estão lhe pregando uma peça. Como uma ponte de madeira existe neste período histórico? Você acha que a máquina de tempo afetou mais a realidade do que imaginava, ou seus problemas mentais estão ainda piores. Com medo e incerteza, você irá:",}
+var questaoSilhueta = {nome: "questaoSilhueta", titulo: "Susto estranho", botao1: "Explorar as redondezas, tentando encontrar a criatura", botao2: "Seguir pela direita. Você acha que a criatura desapareceu por ali", texto: "A silhueta repentina da criatura, com os olhos vermelhos, apenas encara você, com um olhar sem vida. Após o susto inicial, você percebe que a criatura não te ataca, não rosna e mal se move. De repente, ela desaparece, diante de seus olhos. Confuso, você olha ao redor, procurando a criatura. Ela sumiu, realmente, deixando apenas uma estranha sensação familiar para trás. Você irá:",}
 
-conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha, questaoPonte]
+conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha, questaoPonte, questaoSilhueta]
 norteadorUsados = []
 
 
@@ -74,7 +75,7 @@ batalhaUsados = []
 
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
-        if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoPonte"){
+        if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoPonte"|| questaoAtual.nome == "questaoSilhueta"){
             cnf() // Controlador das questões Norteadoras da Floresta
         }
         else if (questaoAtual.nome == "questaoInseto"){
@@ -249,6 +250,10 @@ function consequenciasFloresta(questao){
         if (questaoAtual.nome == "questaoBatalha"){
             alterarSanidade("perde")
             alterarVida("perde")
+            ativarJumpscare()
+        }
+        if (questaoAtual.nome == "questaoSilhueta"){
+            alterarSanidade("perde")
             ativarJumpscare()
         }
     }
