@@ -210,3 +210,15 @@ h2{
     background-image: url(../img/cenarios/cenarioIndex.png);
     background-position:top;
 }
+
+.containerIndex{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+
+.iconesSom{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 80px;
+}
