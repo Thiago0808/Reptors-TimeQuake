@@ -10,88 +10,8 @@
 
     <!-- Biblioteca animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-    <!-- Conexão das fontes do Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <!-- Fonte Lacquer -->
-    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
-
-    <!-- Fonte Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-
 </head>
-<body">
-    <div class="container">
-
-        <div class="divJumpscare" id="divJumpscare">
-            <img src="view/img/jumpscare/jumpscare1.png" alt="Jumpscare de Dinossauro" id="imgJumpscare">
-        </div>
-
-        <div class="historia">
-            <div class="questao animate__animated animate__fadeInDown">
-                <h1 id="titulo">O Tempo é o seu pior inimigo agora</h1>
-                <p id="texto">Você estava em 2131, testando a nova versão de sua máquina de tempo. A segurança não era algo que você priorizava. Ao realizar a viagem no tempo, você foi parar há 100 milhões de anos atrás. A máquina sofreu graves danos no processo, além de agravar ainda mais seus problemas neurológicos, o que te fez acordar apenas 5 dias depois de sua chegada a este mundo estranho. A máquina está tão danificada que está voltando no passado lentamente, de dia em dia. Você percebe que precisa sobreviver até o “primeiro dia”, ou seja, até a data em que você viajou para essa linha do tempo pare reverter o processo. Para isso, você deve manter no minímo 60% de sua vida e sanidade até lá. Você é sábio, sabe quais criaturas habitam nesse espaço-tempo. Ou, pelo menos, acha que sabe.</p>
-            </div>
-            <div class="opcoes animate__animated animate__fadeIn animate__delay-1s">
-                <button id="botao1" value="botao1" class="botao1">Você ficará onde está, com medo de explorar as redondezas</button>
-                <button id="botao2" value="botao2" class="botao2">Você irá explorar a selva, em busca de mantimentos</button>
-            </div>
-        </div>
-
-        <div class="info">
-            <div class="barras"> 
-                <div class="som animate__animated animate__fadeInLeft animate__delay-2s" id="somDesligado">
-                    <img src="view/img/componentes/somDesligado.png" alt="Som Desligado" class="imagem_100">
-                    <img src="view/img/componentes/somDesligado_50.png" alt="Som Desligado" class="imagem_50">
-                </div>
-                <div class="som none" id="somLigado">
-                    <img src="view/img/componentes/somLigado.png" alt="Som Ligado" class="imagem_100">
-                    <img src="view/img/componentes/somLigado_50.png" alt="Som Ligado" class="imagem_50">
-                </div>
-                <div class="sanidade animate__animated animate__fadeInLeft animate__delay-3s">
-                    <img src="view/img/componentes/sanidade.png" class="imagem_100" alt="Cabeça com Cérebro, representando Sanidade">
-                    <img src="view/img/componentes/sanidade_50.png" class="imagem_50" alt="Cabeça com Cérebro, representando Sanidade">
-                    <progress id="barraSanidade" value="100" max="100"></progress>
-                    <h3 id="porcentagemSanidade">100%</h3>
-                </div>
-                <div class="vida animate__animated animate__fadeInLeft animate__delay-4s">
-                    <img src="view/img/componentes/vida.png" class="imagem_100" alt="Coração, representando Vida">
-                    <img src="view/img/componentes/vida_50.png"   class="imagem_50" alt="Coração, representando Vida">
-
-                    <progress id="barraVida" value="100" max="100"></progress>
-                    <h3 id="porcentagemVida">100%</h3>
-                </div>
-            </div>
-
-            <div class="dia">
-                <h2 id="diaAtual" class="animate__animated animate__fadeIn animate__delay-5s">dia 5</h2> 
-            </div>
-
-        </div>
-
-    </div>
-
-    <audio  controls="controls" class="audio" id="audio" loop>
-        <source src="view/audios/fundoMusical.mp3" type="audio/mp3"/>
-    </audio>
-
-    <audio controls="controls" id="somJumpscare">
-        <source src="view/audios/audiosJumpscare/jumpscareNormal10.mp3" type="audio/mp3" id="sourceJumpscare">
-    </audio>
-    
+<body class="index">
     
 </body>
 </html>
-
-<script src="js/audio.js"></script>
-<script src="js/dia.js"></script>
-<script src="js/barras.js"></script>
-<script src="js/jumpscare.js"></script>
-<script src="js/cenarios/caverna.js"></script>
-<script src="js/cenarios/floresta.js"></script>
-<script src="js/cenarios/final.js"></script>
-<script src="js/cenarios/base.js"></script>
-<script src="js/style.js"></script>

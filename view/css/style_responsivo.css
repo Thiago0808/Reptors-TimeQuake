@@ -1,8 +1,4 @@
 @media (max-width: 1600px) {
-    h1{
-        color: red; 
-        font-size: 1.6rem;
-    }
 
     p{
         font-size: 0.9rem;
@@ -35,9 +31,6 @@
 }
 
 @media (max-width: 1800px) {
-    h1{
-        color: red;
-    }
 
     .historia{
         margin-top: 15px;
