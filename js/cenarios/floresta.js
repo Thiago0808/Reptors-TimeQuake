@@ -13,8 +13,9 @@ var questaoPerigo = {nome: "questaoPerigo", titulo: "perigo infinito", botao1: "
 var questaoCaixote = {nome: "questaoCaixote", titulo: "Algo familiar", botao1: "Olhar dentro da caixa, para saber se há algo útil dentro", botao2: "Afastar-se, pois a caixa não lhe interessa mais", texto: "Você encontra diante de si seu grande caixote de mental entre as árvores. Que pena que não é mais possível usar essa caixa como pretendia antes. Você irá:",}
 var questaoRefugio = {nome: "questaoRefugio", titulo: "Em Busca de Refúgio", botao1: "Seguir em frente, por dentro da floresta", botao2: "Seguir a direita, em direção ao rio", texto: "Você sente a urgente necessidade de achar um abrigo para passar as próximas horas. O ambiente demostra nenhum sinal de que possa haver um lugar seguro. Mesmo assim, você terá que optar por algum caminho para alcançar seu objetivo. Você irá: ",}
 var questaoBatalha = {nome: "questaoBatalha", titulo: "dentes da morte", botao1: "Pegar um pedaço de madeira e bater na criatura", botao2: "Pegar uma pedra e bater na criatura", texto: "De repente, você é atacado por uma criatura feroz, na qual, com seus dentes afiados, morde um dedo de sua mão e o arranca fora. Você grita de dor. A criatura está pronta para se divertir com mais partes sua. Você irá:",}
+var questaoPonte = {nome: "questaoPonte", titulo: "do outro lado", botao1: "Atravessar a ponte, determinado a descobrir o que há do outro lado ", botao2: "Ficar onde está. Você não sabe o nível de segurança desta ponte", texto: "Você inesperadamente encontra uma ponte de madeira entre dois vales, com alguns buracos em sua estrutura. Você esfrega os olhos, tentando ter a certeza que seus olhos não estão lhe pregando uma peça. Como uma ponte de madeira existe neste período histórico? Você acha que a máquina de tempo afetou mais a realidade do que imaginava, ou seus problemas mentais estão ainda piores. Com medo e incerteza, você irá:",}
 
-conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha]
+conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha, questaoPonte]
 norteadorUsados = []
 
 
@@ -73,7 +74,7 @@ batalhaUsados = []
 
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
-        if (questaoAtual.nome == "questaoInicial"){
+        if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoPonte"){
             cnf() // Controlador das questões Norteadoras da Floresta
         }
         else if (questaoAtual.nome == "questaoInseto"){
