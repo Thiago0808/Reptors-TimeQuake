@@ -1,6 +1,6 @@
 @media (max-width: 1600px) {
     h1{
-        /* color: red; */
+        color: red; 
         font-size: 1.6rem;
     }
 
@@ -26,6 +26,20 @@
     }
 
     progress{
-        max-width: 75px;
+        max-width: 70px;
+    }
+
+    h3{
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 1800px) {
+    h1{
+        color: red;
+    }
+
+    .historia{
+        margin-top: 15px;
     }
 }
