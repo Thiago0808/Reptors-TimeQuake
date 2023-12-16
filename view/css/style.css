@@ -216,7 +216,7 @@ h2{
 .containerIndex{
     display: flex;
     flex-direction: column;
-    margin-top: 60px;
+    padding-top: 60px;
 }
 
 .iconesSom{
@@ -253,3 +253,8 @@ a{
     height: 80vh;
     gap: 24px;
 }
+
+.voltar{
+    justify-content: flex-end;
+}
+

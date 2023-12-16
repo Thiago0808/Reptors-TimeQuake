@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="view/img/iconeRT.png" type="image/x-icon">
+    <title>Reptor's TimeQuake - Créditos</title>
+    <link rel="stylesheet" href="view/css/style.css">
+    <link rel="stylesheet" href="view/css/style_responsivo.css">
+
+    <!-- Biblioteca animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <!-- Conexão das fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonte Lacquer -->
+    <link href="https://fonts.googleapis.com/css2?family=Lacquer&display=swap" rel="stylesheet">
+    
+    <!-- Fonte Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body class="index">
+    <div class="containerIndex">
+        <div class="iconesSom">
+            <div class="som animate__animated animate__fadeInLeft " id="somDesligado">
+                <img src="view/img/componentes/somDesligado.png" alt="Som Desligado" class="imagem_100">
+                <img src="view/img/componentes/somDesligado_50.png" alt="Som Desligado" class="imagem_50">
+            </div>
+            <div class="som none" id="somLigado">
+                <img src="view/img/componentes/somLigado.png" alt="Som Ligado" class="imagem_100">
+                <img src="view/img/componentes/somLigado_50.png" alt="Som Ligado" class="imagem_50">
+            </div>
+        </div>
+
+        <div class="historia">
+            <div class="questao animate__animated animate__fadeInDown">
+                <h1 id="titulo">obrigado por estar aqui</h1>
+                <p id="texto">Os criadores, Aline Espindola e Thiago Martins, agradecem por você experimentar esse pequeno projeto: o jogo Reptor’s TimeQuake.Todo o desenvolvimento, desde a programação até as interfaces e histórias, foi realizado por nós, enquanto as imagens foram geradas por meio de inteligência artificial, e os efeitos sonoros foram fornecidos pela Pixabay. O código fonte está disponível para acesso no GitHub.</p>
+                <p id="texto">Esse pequeno jogo foi criado, principalmente, com Javascript. Também utilizamos HTML/CSS, fazendo que o jogo rode inteiramente no nevagador, sem baixar nada. Também utilizamos a biblioteca animate.css, como o próprio nome diz, para colocar essas animações presentes no jogo.</p>
+                <p id="texto">Gostaríamos que considerasse esta iniciativa como uma exploração das capacidades do Javascript na criação de jogos. Vale ressaltar que conseguimos desenvolver este jogo em apenas 12 dias!</p>
+                <p id="texto">Esperamos que tenha apreciado a experiência de Reptor’s TimeQuake e convidamos você a ver o código fonte disponível para aprofundar-se sobre o processo de desenvolvimento. O seu apoio e interesse são fundamentais para nós. Obrigado por se juntar a nós nesta jornada!</p>
+            </div>
+            <div class="opcoes voltar animate__animated animate__fadeIn animate__delay-1s">
+                <a href="index.html"><button class="botaoIndex">Voltar</button></a>
+            </div>
+        </div>
+    </div>
+
+    <audio  controls="controls" class="audio" id="audio" loop>
+        <source src="view/audios/fundoMusical.mp3" type="audio/mp3"/>
+    </audio>
+    
+</body>
+</html>
+
+<script src="js/audio.js"></script>
