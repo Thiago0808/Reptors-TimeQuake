@@ -102,7 +102,7 @@ button{
 .barras{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 }
 
 /* Barra de Progresso */
