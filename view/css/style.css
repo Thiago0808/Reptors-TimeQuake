@@ -209,6 +209,8 @@ h2{
 .index{
     background-image: url(../img/cenarios/cenarioIndex.png);
     background-position:top;
+    background-size: cover;
+    height: 100vh;
 }
 
 .containerIndex{
