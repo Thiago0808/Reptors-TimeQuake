@@ -30,7 +30,7 @@ function ativarUltimo(botao){
         location.reload();
     }
     else if (botao == "botao2"){
-        window.close()
+        location.href = "index.html";
     }
 
 }

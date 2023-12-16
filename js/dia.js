@@ -29,7 +29,7 @@ function mudarDia(){
     diaAtual.innerHTML = "dia "+dia
 
 
-    if (dia == 0){
+    if (dia == 4){
         cenario = "final"
     }
     else{
