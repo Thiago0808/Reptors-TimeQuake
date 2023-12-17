@@ -327,6 +327,12 @@ function consequenciasFloresta(questao){
             alterarVida("ganha")
         }
     }
+    else if (conjuntoAtual == "conjuntoSono"){
+        if (questaoAtual.nome == "questaoDormiu"){
+            alterarSanidade("perde")
+            alterarVida("perde")
+        }
+    }
     else if (conjuntoAtual == "conjuntoFrutas"){
         if (questaoAtual.nome == "questaoFrutaBoa"){
             alterarVida("ganha")
