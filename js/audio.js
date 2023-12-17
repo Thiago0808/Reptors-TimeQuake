@@ -32,7 +32,7 @@ function ativarSomJumpscare(){
 }
 
 function sortearSom(){
-    permitidos = numerosPermitidos(13, sonsUsados);
+    permitidos = numerosPermitidos(8, sonsUsados);
     if (permitidos.length>0){
         condicao = true
         while (condicao){
