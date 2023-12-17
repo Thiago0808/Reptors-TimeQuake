@@ -13,6 +13,12 @@ conjuntoEntrada = [questaoSaida, questaoRupestre, questaoBifurcacao]
 entradaUsados = []
 
 
+var questaoJumpscareCaverna = {nome: "questaoJumpscareCaverna", titulo: "Sons da morte e da salvação", botao1: "Seguir correndo. Você teme a criatura voltar", botao2: "Seguir andando. O perigoso já passou", texto: "As garras frias e escorregadias agarram você com força. Desesperado, você tenta se soltar, em vão. De repente, um barulho nos fundos da caverna desperta a curiosidade da criatura. A mesma te larga e sai correndo em direção ao barulho. Assustado, mas aliviado de ter sobrevivido a situação, você irá:",}
+
+conjuntoJumpscareCaverna = [questaoJumpscareCaverna]
+jumpscaraCavernaUsados = []
+
+
 var questaoMurmurios = {nome: "questaoMurmurios", titulo: "Encontrado seus semelhantes", botao1: "Para a sala oculta, para confrontar os vultos", botao2: "Retornar o caminho, é perigoso demais avançar", texto: "Você avança cautelosamente pelo corredor apertado. Os murmúrios se intensificam, revelando vozes sussurrantes. À medida que avança, percebe que as vozes parecem ecoar de uma sala oculta. Ao chegar, você vê vultos humanóides. Você se questiona se há possibilidade de humanos neste espaço-tempo. Se sim, a máquina do tempo afetou mais a realidade do que imaginava. Você irá:",}
 
 conjuntoMurmurios = [questaoMurmurios]
@@ -32,7 +38,7 @@ function ativarConjuntoCaverna(botao){
         if (conjuntoAtual == "conjuntoEntrada"){
             if (questaoAtual.nome == "questaoEntrada"){
                 if (botao == "botao1"){
-                    ativarJumpscare()
+                    cjc() //Controlador das questões de Jumpscare da Caverna
                 }
                 else{
                     cec() // Controlador das questões de Entrada da Caverna
@@ -60,6 +66,11 @@ function ativarConjuntoCaverna(botao){
             else if(questaoAtual.nome == "questaoExpulso"){
                 mudarCenario("floresta")
                 cnf() // Controlador das questões Norteadoras da Floresta            
+            }
+        }
+        else if (conjuntoAtual == "conjuntoJumpscareCaverna"){
+            if (questaoAtual.nome == "questaoJumpscareCaverna"){
+                cec() // Controlador das questões de Entrada da Caverna
             }
         }
         else if (conjuntoAtual == "conjuntoMurmurios"){
@@ -100,6 +111,15 @@ function cec(){
     consequenciasCaverna(questao)
 }
 
+function cjc(){
+    sorteado = sortearQuestao(conjuntoJumpscareCaverna.length, jumpscaraCavernaUsados)
+    questao = conjuntoJumpscareCaverna[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoJumpscareCaverna"
+    consequenciasCaverna(questao)
+}
+
 function cmuc(){
     sorteado = sortearQuestao(conjuntoMurmurios.length, murmuriosUsados)
     questao = conjuntoMurmurios[sorteado]
@@ -125,9 +145,11 @@ function consequenciasCaverna(questao){
             alterarVida("perde")
         }
     }
-    else if (conjuntoAtual == "conjuntoInseto"){
-        if (questaoAtual.nome == "questaoAranha"){
+    else if (conjuntoAtual == "conjuntoJumpscareCaverna"){
+        if (questaoAtual.nome == "questaoJumpscareCaverna"){
             alterarSanidade("perde")
+            ativarJumpscare()
         }
     }
+    
 }
