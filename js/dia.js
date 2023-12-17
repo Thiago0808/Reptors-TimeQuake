@@ -36,5 +36,6 @@ function mudarDia(){
         diaAtual.innerHTML = "dia "+dia
     }
 
+    tremerDia(diaAtual)
 
 }

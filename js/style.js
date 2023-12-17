@@ -13,3 +13,18 @@ function tremerIcone(icone){
         icone.classList.remove("infinite");
     }, 1000);
 }
+
+function tremerDia(dia){
+    dia.classList.remove("animate__fadeIn")
+    dia.classList.remove("animate__delay-5s")
+
+    dia.classList.add("animate__wobble")
+    dia.classList.add("animate__infinite")
+    dia.classList.add("infinite")
+
+    setTimeout(() => {
+        dia.classList.remove("animate__wobble");
+        dia.classList.remove("animate__infinite");
+        dia.classList.remove("infinite");
+    }, 1000);
+}
