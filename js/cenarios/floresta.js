@@ -72,7 +72,7 @@ var questaoBatalha2 = {nome: "questaoBatalha2", titulo: "criaturas da morte", bo
 conjuntoBatalha = [questaoBatalha2]
 batalhaUsados = []
 
-var questaoMachado2 = {nome: "questaoMachado2", titulo: "Os princípios da sobrevivência ", botao1: "Pegar os gravetos perto dos arbustos", botao2: "Pegar os gravetos perto das pedras", texto: "Você tem a ideia de pegar alguns gravetos com o machado para fazer fogueiras futuramente. Você irá:",}
+var questaoMachado2 = {nome: "questaoMachado2", titulo: "Os princípios da sobrevivência ", botao1: "Pegar os gravetos perto dos arbustos", botao2: "Pegar os gravetos perto das pedras", texto: "Você tem a ideia de pegar alguns gravetos com o machado para fazer fogueiras futuramente. Você já tinha lido uma vez de como ir acumulando recursos era um dos pilares da sobrevivência. Você irá:",}
 
 conjuntoMachado = [questaoMachado2]
 machadoUsados = []
