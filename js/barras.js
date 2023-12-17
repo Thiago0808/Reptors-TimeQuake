@@ -19,13 +19,13 @@ function alterarSanidade(alteracao){
     if (alteracao == "ganha" && verificarSanidade()<100){
         quantidadeSanidade += 10;
 
-        let icone = document.querySelectorAll(".sanidade");
+        let icone = document.querySelector(".sanidade");
         tremerIcone(icone)
     }
     else if (alteracao == "perde"){
         quantidadeSanidade -= 10;
 
-        let icone = document.querySelectorAll(".sanidade");
+        let icone = document.querySelector(".sanidade");
         tremerIcone(icone)
     }
 
@@ -47,13 +47,13 @@ function alterarVida(alteracao){
     if (alteracao == "ganha" && verificarVida()<100){
         quantidadeVida += 10;
 
-        let icone = document.querySelectorAll(".vida");
+        let icone = document.querySelector(".vida");
         tremerIcone(icone)
     }
     else  if (alteracao == "perde"){
         quantidadeVida -= 10;
 
-        let icone = document.querySelectorAll(".vida");
+        let icone = document.querySelector(".vida");
         tremerIcone(icone)
     }
 
