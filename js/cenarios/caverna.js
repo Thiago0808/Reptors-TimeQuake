@@ -57,6 +57,10 @@ function ativarConjuntoCaverna(botao){
                     cec() // Controlador das questões de Entrada da Caverna
                 }
             }
+            else if(questaoAtual.nome == "questaoExpulso"){
+                mudarCenario("floresta")
+                cnf() // Controlador das questões Norteadoras da Floresta            
+            }
         }
         else if (conjuntoAtual == "conjuntoMurmurios"){
             if (questaoAtual.nome == "questaoMurmurios"){
@@ -83,8 +87,13 @@ function ativarConjuntoCaverna(botao){
 }
 
 function cec(){
-    sorteado = sortearQuestao(conjuntoEntrada.length, entradaUsados)
-    questao = conjuntoEntrada[sorteado]
+    if (conjuntoEntrada.length != entradaUsados.length){
+        sorteado = sortearQuestao(conjuntoEntrada.length, entradaUsados)
+        questao = conjuntoEntrada[sorteado]
+    }
+    else{
+        questao = {nome: "questaoExpulso", titulo: "Luz no fim da caverna", botao1: "Para a saída da esquerda, por causa da claridade", botao2: "Para a saída da direita. Você gosta de aventuras", texto: "Você chega no final do caminho e encontra duas saídas da caverna. A da esquerda está com mais claridade, por causa da ausência de árvores, e a da direita leva você para um lugar cheio de lama. Você irá:",}
+    }
     alterarTexto(questao)
     questaoAtual = questao
     conjuntoAtual = "conjuntoEntrada"
