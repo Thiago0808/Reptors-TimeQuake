@@ -308,7 +308,7 @@ function consequenciasFloresta(questao){
         }
         if (questaoAtual.nome == "questaoSilhueta"){
             alterarSanidade("perde")
-            ativarJumpscare()
+            ativarJumpscareFantasma()
         }
     }
     else if (conjuntoAtual == "conjuntoInseto"){
