@@ -12,15 +12,15 @@ function ativarFinal(){
         alterarTexto(finalBom)
         mudarCenario("FinalBom")
     }
-    else if (verificarSanidade()>60 && verificarVida()<60){
+    else if (verificarSanidade()>=60 && verificarVida()<60){
         alterarTexto(finalVida)
         mudarCenario("FinalVida")
     }
-    else if(verificarSanidade()<60 && verificarVida()>60){
+    else if(verificarSanidade()<60 && verificarVida()>=60){
         alterarTexto(finalSanidade)
         mudarCenario("FinalSanidade")
     }
-    else if (verificarSanidade()<=verificarVida){
+    else if (verificarSanidade()<=verificarVida()){
         alterarTexto(finalSanidade)
         mudarCenario("FinalSanidade")
     }
