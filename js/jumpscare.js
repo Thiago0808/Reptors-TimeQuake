@@ -14,7 +14,7 @@ function ativarJumpscare(){
 }
 
 function sortearJumpscare(){
-    permitidos = numerosPermitidos(5, jumpscareUsados);
+    permitidos = numerosPermitidos(6, jumpscareUsados);
 
 
 
@@ -22,7 +22,7 @@ function sortearJumpscare(){
     if (permitidos.length>0){
         condicao = true
         while (condicao){
-            sorteado = Math.ceil(Math.random()*5)
+            sorteado = Math.ceil(Math.random()*6)
             sorteado --;
             for (let i=0; i<permitidos.length; i++){
                 //console.log(usados[i], sorteado)
