@@ -8,7 +8,7 @@ var finalSanidade = {nome: "finalSanidade", titulo: "traumas por todos os lados"
 
 function ativarFinal(){
     cenario = "ultimo"
-    if (verificarSanidade()>60 && verificarVida()>60){
+    if (verificarSanidade()>=60 && verificarVida()>=60){
         alterarTexto(finalBom)
         mudarCenario("FinalBom")
     }
