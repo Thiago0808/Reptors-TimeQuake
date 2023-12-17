@@ -5,7 +5,6 @@ let imgJumpscare = document.getElementById("imgJumpscare")
 jumpscareUsados= [0];
 jumpscareFantasmaUsados= [0];
 
-
 function ativarJumpscare(){
     sorteado = sortearJumpscare()
     body.classList.add("bloquear")
@@ -46,7 +45,6 @@ function finalizarJumpscare(){
 }
 
 // Fantasma
-
 function ativarJumpscareFantasma(){
     sorteado = sortearJumpscareFantasma()
     body.classList.add("bloquear")
@@ -57,7 +55,7 @@ function ativarJumpscareFantasma(){
 }
 
 function sortearJumpscareFantasma(){
-    permitidos = numerosPermitidos(2, jumpscareFantasmaUsados);
+    permitidos = numerosPermitidos(2, jumpscareFantasmaUsados)
     if (permitidos.length>0){
         condicao = true
         while (condicao){
@@ -72,7 +70,7 @@ function sortearJumpscareFantasma(){
         }
     }
 
-    jumpscareFantasmaUsados.push(sorteado);
+    jumpscareFantasmaUsados.push(sorteado)
     return sorteado
 }
 

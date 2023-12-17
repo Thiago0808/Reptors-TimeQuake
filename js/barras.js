@@ -18,9 +18,15 @@ function verificarVida(){
 function alterarSanidade(alteracao){
     if (alteracao == "ganha" && verificarSanidade()<100){
         quantidadeSanidade += 10;
+
+        let icone = document.querySelectorAll(".sanidade");
+        tremerIcone(icone)
     }
-    else  if (alteracao == "perde"){
+    else if (alteracao == "perde"){
         quantidadeSanidade -= 10;
+
+        let icone = document.querySelectorAll(".sanidade");
+        tremerIcone(icone)
     }
 
     if (quantidadeSanidade == 0 ){
@@ -40,9 +46,15 @@ function alterarSanidade(alteracao){
 function alterarVida(alteracao){
     if (alteracao == "ganha" && verificarVida()<100){
         quantidadeVida += 10;
+
+        let icone = document.querySelectorAll(".vida");
+        tremerIcone(icone)
     }
     else  if (alteracao == "perde"){
         quantidadeVida -= 10;
+
+        let icone = document.querySelectorAll(".vida");
+        tremerIcone(icone)
     }
 
     if (quantidadeVida == 0 ){

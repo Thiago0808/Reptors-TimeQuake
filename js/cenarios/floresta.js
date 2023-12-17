@@ -76,18 +76,17 @@ var questaoMachado2 = {nome: "questaoMachado2", titulo: "Os princípios da sobre
 conjuntoMachado = [questaoMachado2]
 machadoUsados = []
 
+
 var questaoGravetoArbusto = {nome: "questaoGravetoArbusto", titulo: "Alimentando,mas desprotegido", botao1: "Ir na direção dos arbustos, em busca de mais comida", botao2: "Ir na direção das pedras. Pode haver algo lá", texto: "Você está com sorte. Ou não. Além dos gravetos, você encontra algumas frutinhas nos arbustos. Você lembra que são as mesmas que sua colega de trabalho comia no lanche da tarde. Esfomeado, você come várias de uma vez e guarda para depois. Mas, infelizmente, o machado teve seu cabo quebrado ao pegar os gravetos. Só dá para ter sorte de uma coisa de cada vez. Desanimado, mas alimentando, você irá:",}
 
 conjuntoGravetoArbusto = [questaoGravetoArbusto]
 gravetoArbustoUsados = []
 
 
-var questaoGravetoPedras = {nome: "questaoGravetoPedras", titulo: "Azar ou só um ambiente hostil?", botao1: "Ir na direção dos arbustos, em busca de mais comida", botao2: "Ir na direção das pedras. Pode haver algo lá", texto: "Infelizmente, ao pegar os gravetos, rompe o cabo do machado. Você se sente um completo azarado. Desanimado e cansado, você irá:",}
+var questaoGravetoPedras = {nome: "questaoGravetoPedras", titulo: "Azar ou só um ambiente hostil?", botao1: "Ir na direção dos arbustos, em busca de mais comida", botao2: "Ir na direção das pedras. Pode haver algo lá", texto: "Infelizmente, ao pegar os gravetos, rompe o cabo do machado. Você se sente um completo azarado. Isso não estava planejado em livros de sobrevivência. Você esfrega os olhos, exausto das consequências de suas ações. Desanimado e cansado, você irá:",}
 
 conjuntoGravetoPedras = [questaoGravetoPedras]
 gravetoPedrasUsados = []
-
-
 
 
 function ativarConjuntoFloresta(botao){

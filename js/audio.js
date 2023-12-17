@@ -2,8 +2,6 @@ som = document.querySelectorAll(".som")
 audio = document.getElementById("audio")
 audioJumpscare = document.getElementById("somJumpscare")
 sourceJumpscare = document.getElementById("sourceJumpscare")
-
-
 estado = "off"
 
 for (let i = 0; i < som.length; i ++){
@@ -55,8 +53,6 @@ function sortearSom(){
 }
 
 //Fantasma 
-
-
 sonsFantasmaUsados = [0]
 
 function ativarSomJumpscareFantasma(){
