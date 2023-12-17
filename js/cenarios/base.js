@@ -17,6 +17,10 @@ function mudarCenario(local){
         conjuntoAtual = "conjuntoEntrada"
         ativarConjuntoCaverna("inicial")
     }
+    else if (local == "floresta"){
+        imagem = "url(view/img/cenarios/cenarioCaminho.jpg)"
+        body.style.backgroundImage = imagem
+    }
     else if (local == "FinalBom"){
         imagem = "url(view/img/cenarios/cenarioFinalBom.jpg)"
         body.style.backgroundImage = imagem

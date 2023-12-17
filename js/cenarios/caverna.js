@@ -39,8 +39,13 @@ function ativarConjuntoCaverna(botao){
                 }
             }
             else if(questaoAtual.nome == "questaoSaida"){
-                cec() // Controlador das questões de Entrada da Caverna
-            }
+                if (botao == "botao1"){
+                    mudarCenario("floresta")
+                    cnf() // Controlador das questões Norteadoras da Floresta
+                }
+                else{
+                    cec() // Controlador das questões de Entrada da Caverna
+                }            }
             else if(questaoAtual.nome == "questaoRupestre"){
                 cec() // Controlador das questões de Entrada da Caverna
             }
