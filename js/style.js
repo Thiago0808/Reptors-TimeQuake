@@ -1,4 +1,6 @@
 function tremerIcone(icone){
+    icone.classList.remove("animate__fadeInLeft")
+    
     icone.classList.add("animate__headShake")
     icone.classList.add("animate__infinite")
     icone.classList.add("infinite")
