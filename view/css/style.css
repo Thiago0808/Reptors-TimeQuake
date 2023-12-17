@@ -75,7 +75,7 @@ button{
     cursor: pointer;
 }
 
-.botao1:hover,.botao2:hover{
+.botao1:hover,.botao2:hover,.botaoIndex1:hover,.botaoIndex2:hover{
     transform: scale(1.09);
     transition: 100ms linear; 
 }
