@@ -93,7 +93,7 @@ gravetoPedrasUsados = []
 
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
-        if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoPonte"|| questaoAtual.nome == "questaoSilhueta"){
+        if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoPonte"|| questaoAtual.nome == "questaoSilhueta" || questaoAtual.nome == "questaoRefugio"){
             cnf() // Controlador das questões Norteadoras da Floresta
         }
         else if (questaoAtual.nome == "questaoInseto"){
@@ -134,14 +134,6 @@ function ativarConjuntoFloresta(botao){
             }
             else{
                 cnf() // Controlador das questões Norteadoras da Floresta
-            }
-        }
-        else if (questaoAtual.nome == "questaoRefugio"){
-            if (botao == "botao1"){
-                cnf() // Controlador das questões Norteadoras da Floresta
-            }
-            else{
-                //Ir pro Rio
             }
         }
         else if (questaoAtual.nome == "questaoBatalha"){
