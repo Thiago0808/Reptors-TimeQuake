@@ -20,8 +20,13 @@ function ativarFinal(){
         alterarTexto(finalSanidade)
         mudarCenario("FinalSanidade")
     }
+    else if (verificarSanidade()<=verificarVida){
+        alterarTexto(finalSanidade)
+        mudarCenario("FinalSanidade")
+    }
     else{
-        console.log("Tela de Ambos dando ruim")
+        alterarTexto(finalVida)
+        mudarCenario("FinalVida")
     }
 }
 
