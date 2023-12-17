@@ -14,17 +14,19 @@ function tremerIcone(icone){
     }, 1000);
 }
 
-function tremerDia(dia){
+function animarDia(dia){
     dia.classList.remove("animate__fadeIn")
     dia.classList.remove("animate__delay-5s")
 
-    dia.classList.add("animate__wobble")
-    dia.classList.add("animate__infinite")
-    dia.classList.add("infinite")
+    dia.classList.add("animate__fadeOut")
 
     setTimeout(() => {
-        dia.classList.remove("animate__wobble");
-        dia.classList.remove("animate__infinite");
-        dia.classList.remove("infinite");
+        dia.classList.remove("animate__fadeOut")
+        dia.style.display = "none"
     }, 1000);
+
+    setTimeout(() => {
+        dia.style.display = "block"
+        dia.classList.add("animate__fadeIn")
+    },2000)
 }

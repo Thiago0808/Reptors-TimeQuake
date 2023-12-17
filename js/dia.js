@@ -26,16 +26,15 @@ function escolhaTomada(){
 
 function mudarDia(){
     dia --;
-    diaAtual.innerHTML = "dia "+dia
 
+    setTimeout(() => {
+        diaAtual.innerHTML = "dia "+dia
+    }, 1500);
 
     if (dia == 0){
         cenario = "final"
     }
-    else{
-        diaAtual.innerHTML = "dia "+dia
-    }
 
-    tremerDia(diaAtual)
+    animarDia(diaAtual)
 
 }
