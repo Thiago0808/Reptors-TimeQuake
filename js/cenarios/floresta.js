@@ -15,8 +15,9 @@ var questaoRefugio = {nome: "questaoRefugio", titulo: "Em Busca de Refúgio", bo
 var questaoBatalha = {nome: "questaoBatalha", titulo: "dentes da morte", botao1: "Pegar um pedaço de madeira e bater na criatura", botao2: "Pegar uma pedra e bater na criatura", texto: "De repente, você é atacado por uma criatura feroz, na qual, com seus dentes afiados, morde um dedo de sua mão e o arranca fora. Você grita de dor. A criatura está pronta para se divertir com mais partes sua. Você irá:",}
 var questaoPonte = {nome: "questaoPonte", titulo: "do outro lado", botao1: "Atravessar a ponte. Você quer descobrir o que há do outro lado ", botao2: "Ficar onde está. Você não confia nesta ponte", texto: "Você inesperadamente encontra uma ponte de madeira entre dois vales, com alguns buracos em sua estrutura. Você esfrega os olhos, tentando ter a certeza que seus olhos não estão lhe pregando uma peça. Como uma ponte de madeira existe neste período histórico? Você acha que a máquina de tempo afetou mais a realidade do que imaginava, ou seus problemas mentais estão ainda piores. Com medo e incerteza, você irá:",}
 var questaoMachado = {nome: "questaoMachado", titulo: "Sorte? Ou não?", botao1: "Pegar o machado, para se proteger", botao2: "Ignorar o machado. Você tem medo de sua origem", texto: "Você, inesperadamente, acha um machado no meio dos arbustos. Como existe um machado nesta época? Não há humanos. Pelo menos, não era para ter. Mesmo achando estranho, você irá:",}
+var questaoMontanha = {nome: "questaoMontanha", titulo: "Montanha que leva até o céu", botao1: "Escalar a montanha. Não será difícil", botao2: "Contornar a montanha. É mais seguro", texto: "Em seu caminho, há uma montanha íngreme bloqueando sua passagem. Você pensa que pode escalar por essas pedras. Você analisa que está escalada não é difícil. Você poderia cortornar a montanha, mas você ouve estranhos barulhos por aquilo caminho. Você irá:",}
 
-conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha, questaoPonte, questaoMachado]
+conjuntoNorteador = [questaoCaverna, questaoInseto, questaoBarulho, questaoPerigo, questaoCaixote, questaoRefugio, questaoBatalha, questaoPonte, questaoMachado, questaoMontanha]
 norteadorUsados = []
 
 
@@ -89,6 +90,16 @@ conjuntoGravetoPedras = [questaoGravetoPedras]
 gravetoPedrasUsados = []
 
 
+var questaoCaminhoMontanha = {nome: "questaoCaminhoMontanha", titulo: "Enganado pelas aparências", botao1: "Andar pela beirada, apreciando a vista", botao2: "Ir longe da beirada. É mais seguro", texto: "Você percebe que o caminho é muito mais difícil que aparentava. Várias pedras caíram no percurso, te deixando cara a cara da morte. Você sofre vários cortes durante o processo. Após ter escalado a impiedosa montanha, você irá:",}
+
+conjuntoMontanha = [questaoCaminhoMontanha]
+montanhaUsados = []
+
+
+var questaoLonge = {nome: "questaoLonge", titulo: "Longe da montanha. Perto do medo", botao1: "Andar pela clareira. Você enxerga melhor lá", botao2: "Ir por dentro da floresta, em busca de mantimentos", texto: "Você anda por este caminho apavorado pelas barulhos que ele ecoa. O vento que sopra pelas folhas cria assustadoras sombras que parecem que vão te atacar. Você jura que pode ouvir gritos de vez em quando. Sons de grunhidos se espalham por todos lados.  Finalmente, você chega em uma clareira, e os sons parecem ter desaparecido. Você irá:",}
+conjuntoLonge = [questaoLonge]
+longeUsados = []
+
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
         if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoPonte"|| questaoAtual.nome == "questaoSilhueta" || questaoAtual.nome == "questaoRefugio"){
@@ -145,6 +156,14 @@ function ativarConjuntoFloresta(botao){
                 cnf() // Controlador das questões Norteadoras da Floresta
             }
         }
+        else if (questaoAtual.nome == "questaoMontanha"){
+            if (botao == "botao1"){
+                cmof() // Controlador das questões de Montanha da Floresta
+            }
+            else{
+                cnf() // Controlador das questões Norteadoras da Floresta
+            }
+        }
     }
     else if (conjuntoAtual == "conjuntoSono"){
         if (questaoAtual.nome == "questaoDormiu"){
@@ -167,6 +186,21 @@ function ativarConjuntoFloresta(botao){
             else{
                 cfof() // Controlador das questões de Folhas da Floresta
             }
+        }
+    }
+    else if (conjuntoAtual == "conjuntoMontanha"){
+        if (questaoAtual.nome == "questaoCaminhoMontanha"){
+            if (botao == "botao1"){
+                cnf() // Controlador das questões Norteadoras da Floresta
+            }
+            else{
+                clf() // Controlador das questões de Longe da montanha da Floresta
+            }
+        }
+    }
+    else if (conjuntoAtual == "conjuntoLonge"){
+        if (questaoAtual.nome == "questaoLonge"){
+            cnf() // Controlador das questões Norteadoras da Floresta
         }
     }
     else if (conjuntoAtual == "conjuntoMachado"){
@@ -276,6 +310,24 @@ function cmf(){
     consequenciasFloresta(questao)
 }
 
+function cmof(){
+    sorteado = sortearQuestao(conjuntoMontanha.length, montanhaUsados)
+    questao = conjuntoMontanha[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoMontanha"
+    consequenciasFloresta(questao)
+}
+
+function clf(){
+    sorteado = sortearQuestao(conjuntoLonge.length, longeUsados)
+    questao = conjuntoLonge[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoLonge"
+    consequenciasFloresta(questao)
+}
+
 function cgaf(){
     sorteado = sortearQuestao(conjuntoGravetoArbusto.length, gravetoArbustoUsados)
     questao = conjuntoGravetoArbusto[sorteado]
@@ -349,6 +401,17 @@ function consequenciasFloresta(questao){
             alterarSanidade("perde")
             alterarVida("perde")
             ativarJumpscare()
+        }
+    }
+    else if (conjuntoAtual == "conjuntoMontanha"){
+        if (questaoAtual.nome == "questaoCaminhoMontanha"){
+            alterarSanidade("perde")
+            alterarVida("perde")
+        }
+    }
+    else if (conjuntoAtual == "conjuntoLonge"){
+        if (questaoAtual.nome == "questaoLonge"){
+            alterarSanidade("perde")
         }
     }
     else if (conjuntoAtual == "conjuntoGravetoArbusto"){
