@@ -77,7 +77,7 @@ conjuntoMachado = [questaoMachado2]
 machadoUsados = []
 
 
-var questaoGravetoArbusto = {nome: "questaoGravetoArbusto", titulo: "Alimentando,mas desprotegido", botao1: "Ir na direção dos arbustos, em busca de mais comida", botao2: "Ir na direção das pedras. Pode haver algo lá", texto: "Você está com sorte. Ou não. Além dos gravetos, você encontra algumas frutinhas nos arbustos. Você lembra que são as mesmas que sua colega de trabalho comia no lanche da tarde. Esfomeado, você come várias de uma vez e guarda para depois. Mas, infelizmente, o machado teve seu cabo quebrado ao pegar os gravetos. Só dá para ter sorte de uma coisa de cada vez. Desanimado, mas alimentando, você irá:",}
+var questaoGravetoArbusto = {nome: "questaoGravetoArbusto", titulo: "Alimentado, mas desprotegido", botao1: "Ir na direção dos arbustos, em busca de mais comida", botao2: "Ir na direção das pedras. Pode haver algo lá", texto: "Você está com sorte. Ou não. Além dos gravetos, você encontra algumas frutinhas nos arbustos. Você lembra que são as mesmas que sua colega de trabalho comia no lanche da tarde. Esfomeado, você come várias de uma vez e guarda para depois. Mas, infelizmente, o machado teve seu cabo quebrado ao pegar os gravetos. Só dá para ter sorte de uma coisa de cada vez. Desanimado, mas alimentando, você irá:",}
 
 conjuntoGravetoArbusto = [questaoGravetoArbusto]
 gravetoArbustoUsados = []
