@@ -48,6 +48,12 @@ var questaoAranha = {nome: "questaoAranha", titulo: "agonia de pequenas pernas",
 conjuntoInseto = [questaoAranha]
 insetoUsados = []
 
+
+var questaoAranhaMorta = {nome: "questaoAranhaMorta", titulo: "Nojento, mas seguro", botao1: "Procurar uma poça para limpar as mãos", botao2: "Limpar as mãos na roupa e seguir adiante", texto: "Você consegue matar a aranha que estava em suas costas. Você fica aliviado dela não ter te machucado, apesar do susto. Até que o mundo não foi tão cruel com você dessa vez. Depois dessa sorte, você irá:",}
+conjuntoAranhaMorta = [questaoAranhaMorta]
+aranhaMortaUsados = []
+
+
 var questaoDormiu = {nome: "questaoDormiu", titulo: "o pior sono de sua vida", botao1: "Ignorar a picada e continuar explorando", botao2: "Pegar algumas frutas, na esperança que elas te façam melhorar", texto: "Você acaba dormindo sem querer. Você acorda apenas três horas depois, muito desonrientado. Você sente que sua mão está dormente. Ao olhar ela, havia um inseto impregnado em sua pele. No desespero, você arranca ele e o joga para longe. Vocẽ está enjoado e confuso. Por causa disso, você conclui que o inseto era venenoso. Você irá:",}
 
 conjuntoSono = [questaoDormiu]
@@ -110,7 +116,7 @@ function ativarConjuntoFloresta(botao){
                 cif() // Controlador das questões de Inseto da Floresta
             }
             else{
-                cnf() // Controlador das questões Norteadoras da Floresta
+                camf() // Controlador das questões da Aranha Morta da Floresta
             }
         }
         else if (questaoAtual.nome == "questaoBarulho"){
@@ -214,7 +220,7 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha" || conjuntoAtual == "conjuntoGravetoArbusto" || conjuntoAtual == "conjuntoGravetoPedras"){
+    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha" || conjuntoAtual == "conjuntoGravetoArbusto" || conjuntoAtual == "conjuntoGravetoPedras" || conjuntoAtual == "conjuntoAranhaMorta"){
         cnf() // Controlador das questões Norteadoras da Floresta
     }
     
@@ -235,6 +241,15 @@ function cif(){
     alterarTexto(questao)
     questaoAtual = questao
     conjuntoAtual = "conjuntoInseto"
+    consequenciasFloresta(questao)
+}
+
+function camf(){
+    sorteado = sortearQuestao(conjuntoAranhaMorta.length, aranhaMortaUsados)
+    questao = conjuntoAranhaMorta[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoAranhaMorta"
     consequenciasFloresta(questao)
 }
 
@@ -366,6 +381,11 @@ function consequenciasFloresta(questao){
     else if (conjuntoAtual == "conjuntoInseto"){
         if (questaoAtual.nome == "questaoAranha"){
             alterarSanidade("perde")
+        }
+    }
+    else if (conjuntoAtual == "conjuntoAranhaMorta"){
+        if (questaoAtual.nome == "questaoAranhaMorta"){
+            alterarSanidade("ganha")
         }
     }
     else if (conjuntoAtual == "conjuntoBarulho"){
