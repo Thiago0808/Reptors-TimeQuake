@@ -103,6 +103,7 @@ montanhaUsados = []
 
 
 var questaoLonge = {nome: "questaoLonge", titulo: "Longe da montanha. Perto do medo", botao1: "Andar pela clareira. Você enxerga melhor lá", botao2: "Ir por dentro da floresta, em busca de mantimentos", texto: "Você anda por este caminho apavorado pelas barulhos que ele ecoa. O vento que sopra pelas folhas cria assustadoras sombras que parecem que vão te atacar. Você jura que pode ouvir gritos de vez em quando. Sons de grunhidos se espalham por todos lados.  Finalmente, você chega em uma clareira, e os sons parecem ter desaparecido. Você irá:",}
+
 conjuntoLonge = [questaoLonge]
 longeUsados = []
 
@@ -167,7 +168,7 @@ function ativarConjuntoFloresta(botao){
                 cmof() // Controlador das questões de Montanha da Floresta
             }
             else{
-                cnf() // Controlador das questões Norteadoras da Floresta
+                clf() // Controlador das questões de Longe da montanha da Floresta
             }
         }
     }
@@ -195,21 +196,6 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoMontanha"){
-        if (questaoAtual.nome == "questaoCaminhoMontanha"){
-            if (botao == "botao1"){
-                cnf() // Controlador das questões Norteadoras da Floresta
-            }
-            else{
-                clf() // Controlador das questões de Longe da montanha da Floresta
-            }
-        }
-    }
-    else if (conjuntoAtual == "conjuntoLonge"){
-        if (questaoAtual.nome == "questaoLonge"){
-            cnf() // Controlador das questões Norteadoras da Floresta
-        }
-    }
     else if (conjuntoAtual == "conjuntoMachado"){
         if (questaoAtual.nome == "questaoMachado2"){
             if (botao == "botao1"){
@@ -220,7 +206,7 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha" || conjuntoAtual == "conjuntoGravetoArbusto" || conjuntoAtual == "conjuntoGravetoPedras" || conjuntoAtual == "conjuntoAranhaMorta"){
+    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha" || conjuntoAtual == "conjuntoGravetoArbusto" || conjuntoAtual == "conjuntoGravetoPedras" || conjuntoAtual == "conjuntoAranhaMorta" || conjuntoAtual == "conjuntoMontanha" || conjuntoAtual == "conjuntoLonge"){
         cnf() // Controlador das questões Norteadoras da Floresta
     }
     
