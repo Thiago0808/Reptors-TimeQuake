@@ -2,7 +2,10 @@ som = document.querySelectorAll(".som")
 audio = document.getElementById("audio")
 audioJumpscare = document.getElementById("somJumpscare")
 sourceJumpscare = document.getElementById("sourceJumpscare")
-estado = "off"
+estado = "on"
+
+audio.play()
+
 
 for (let i = 0; i < som.length; i ++){
     som[i].addEventListener("click", function(){
