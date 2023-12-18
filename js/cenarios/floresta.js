@@ -168,6 +168,7 @@ function ativarConjuntoFloresta(botao){
     else if (conjuntoAtual == "conjuntoSono"){
         if (questaoAtual.nome == "questaoDormiu"){
             if (botao == "botao1"){
+                alterarVida("perde")
                 cnf() // Controlador das questões Norteadoras da Floresta
             }
             else{
@@ -417,6 +418,11 @@ function consequenciasFloresta(questao){
     else if (conjuntoAtual == "conjuntoGravetoArbusto"){
         if (questaoAtual.nome == "questaoGravetoArbusto"){
             alterarVida("ganha")
+        }
+    }
+    else if (conjuntoAtual == "conjuntoGravetoPedras"){
+        if (questaoAtual.nome == "questaoGravetoPedras"){
+            alterarSanidade("perde")
         }
     }
 }
