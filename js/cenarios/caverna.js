@@ -19,7 +19,7 @@ conjuntoJumpscareCaverna = [questaoJumpscareCaverna]
 jumpscaraCavernaUsados = []
 
 
-var questaoMurmurios = {nome: "questaoMurmurios", titulo: "Encontrado seus semelhantes", botao1: "Para a sala oculta, para confrontar os vultos", botao2: "Retornar o caminho, é perigoso demais avançar", texto: "Você avança cautelosamente pelo corredor apertado. Os murmúrios se intensificam, revelando vozes sussurrantes. À medida que avança, percebe que as vozes parecem ecoar de uma sala oculta. Ao chegar, você vê vultos humanóides. Você se questiona se há possibilidade de humanos neste espaço-tempo. Se sim, a máquina do tempo afetou mais a realidade do que imaginava. Você irá:",}
+var questaoMurmurios = {nome: "questaoMurmurios", titulo: "Encontrando seus semelhantes", botao1: "Para a sala oculta, para confrontar os vultos", botao2: "Retornar o caminho, é perigoso demais avançar", texto: "Você avança cautelosamente pelo corredor apertado. Os murmúrios se intensificam, revelando vozes sussurrantes. À medida que avança, percebe que as vozes parecem ecoar de uma sala oculta. Ao chegar, você vê vultos humanóides. Você se questiona se há possibilidade de humanos neste espaço-tempo. Se sim, a máquina do tempo afetou mais a realidade do que imaginava. Você irá:",}
 
 conjuntoMurmurios = [questaoMurmurios]
 murmuriosUsados = []
