@@ -25,7 +25,7 @@ conjuntoMurmurios = [questaoMurmurios]
 murmuriosUsados = []
 
 
-var questaoMochila = {nome: "questaoMochila", titulo: "Inesperado, mas útil", botao1: "Você pega a mochila. Vai ser um ótimo armazenamento", botao2: "Você ignora a mochila. Os possíveis humanos podem sentir falta", texto: "Você chega na sala oculta, mas os vultos já desapareceram. Você explora o lugar e encontra uma espécie de mochila de couro",}
+var questaoMochila = {nome: "questaoMochila", titulo: "Inesperado, mas útil", botao1: "Você pega a mochila. Vai ser útil", botao2: "Você ignora a mochila. Os 'humanos' podem sentir falta", texto: "Você chega na sala oculta, mas os vultos já desapareceram. Você explora o lugar e encontra uma espécie de mochila de couro. Como isso poderia ter sido confeccionado? Será que existem humanos mesmo nesta época? Será que a máquina do tempo afetou mais a realidade do que deveria? Muitas dúvidas, mas pouco tempo. Você precisa agir. Você irá:",}
 
 conjuntoMochila = [questaoMochila]
 mochilaUsados = []
