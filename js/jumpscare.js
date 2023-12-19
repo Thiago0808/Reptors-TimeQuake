@@ -8,9 +8,9 @@ jumpscareFantasmaUsados= [0];
 function ativarJumpscare(){
     setTimeout(() => {
         sorteado = sortearJumpscare()
+        imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
         body.classList.add("bloquear")
         divJumpscare.style.display="block"
-        imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
         ativarSomJumpscare()
         finalizarJumpscare()
     }, 500);
