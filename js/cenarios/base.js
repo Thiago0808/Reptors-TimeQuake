@@ -49,7 +49,7 @@ function removerElementosValor(array, valor) {
 function numerosPermitidos(limite, usados){
     permitidos = []
     n = 0;
-    while (n<limite){
+    while (n<=limite){
         permitidos.push(n)
         n++;
     }
