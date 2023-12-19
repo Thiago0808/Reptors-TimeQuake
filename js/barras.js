@@ -17,21 +17,14 @@ function verificarVida(){
 
 primeiraVez = true
 function alterarSanidade(alteracao){
+    let icone = document.querySelector(".sanidade");
+    tremerIcone(icone)
+
     if (alteracao == "ganha" && verificarSanidade()<100){
         quantidadeSanidade += 10;
-
-        let icone = document.querySelector(".sanidade");
-        tremerIcone(icone)
     }
     else if (alteracao == "perde"){
         quantidadeSanidade -= 10;
-
-        let icone = document.querySelector(".sanidade");
-        tremerIcone(icone)
-    }
-
-    if (quantidadeSanidade == 0 ){
-        //Função de Enlouquecer
     }
     else{
         barraSanidade.value = quantidadeSanidade
@@ -49,21 +42,14 @@ function alterarSanidade(alteracao){
 }
 
 function alterarVida(alteracao){
+    let icone = document.querySelector(".vida");
+    tremerIcone(icone)
+
     if (alteracao == "ganha" && verificarVida()<100){
         quantidadeVida += 10;
-
-        let icone = document.querySelector(".vida");
-        tremerIcone(icone)
     }
     else  if (alteracao == "perde"){
         quantidadeVida -= 10;
-
-        let icone = document.querySelector(".vida");
-        tremerIcone(icone)
-    }
-
-    if (quantidadeVida == 0 ){
-        //Função de Morrer
     }
     else{
         barraVida.value = quantidadeVida
