@@ -6,12 +6,14 @@ jumpscareUsados= [0];
 jumpscareFantasmaUsados= [0];
 
 function ativarJumpscare(){
-    sorteado = sortearJumpscare()
-    body.classList.add("bloquear")
-    divJumpscare.style.display="block"
-    imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
-    ativarSomJumpscare()
-    finalizarJumpscare()
+    setTimeout(() => {
+        sorteado = sortearJumpscare()
+        body.classList.add("bloquear")
+        divJumpscare.style.display="block"
+        imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
+        ativarSomJumpscare()
+        finalizarJumpscare()
+    }, 500);
 }
 
 function sortearJumpscare(){
@@ -46,13 +48,15 @@ function finalizarJumpscare(){
 
 // Fantasma
 function ativarJumpscareFantasma(){
-    sorteado = sortearJumpscareFantasma()
-    imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
-    console.log(sorteado)
-    body.classList.add("bloquear")
-    divJumpscare.style.display="block"
-    ativarSomJumpscareFantasma()
-    finalizarJumpscare()
+    setTimeout(() => {
+        sorteado = sortearJumpscareFantasma()
+        imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
+        console.log(sorteado)
+        body.classList.add("bloquear")
+        divJumpscare.style.display="block"
+        ativarSomJumpscareFantasma()
+        finalizarJumpscare()
+    }, 500);
 }
 
 function sortearJumpscareFantasma(){
