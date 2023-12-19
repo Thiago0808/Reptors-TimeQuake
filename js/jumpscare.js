@@ -6,9 +6,9 @@ jumpscareUsados= [0];
 jumpscareFantasmaUsados= [0];
 
 function ativarJumpscare(){
+    sorteado = sortearJumpscare()
+    imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
     setTimeout(() => {
-        sorteado = sortearJumpscare()
-        imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
         body.classList.add("bloquear")
         divJumpscare.style.display="block"
         ativarSomJumpscare()
@@ -48,9 +48,9 @@ function finalizarJumpscare(){
 
 // Fantasma
 function ativarJumpscareFantasma(){
+    sorteado = sortearJumpscareFantasma()
+    imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
     setTimeout(() => {
-        sorteado = sortearJumpscareFantasma()
-        imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
         console.log(sorteado)
         body.classList.add("bloquear")
         divJumpscare.style.display="block"
@@ -67,7 +67,6 @@ function sortearJumpscareFantasma(){
         while (condicao){
             sorteado = Math.ceil(Math.random()*3)
             for (let i=0; i<permitidos.length; i++){
-                //console.log(usados[i], sorteado)
                 if (permitidos[i] == sorteado){
                     condicao = false
                 }
