@@ -20,6 +20,8 @@ function mudarCenario(local){
     else if (local == "floresta"){
         imagem = "url(view/img/cenarios/cenarioCaminho.jpg)"
         body.style.backgroundImage = imagem
+        conjuntoAtual = "conjuntoEntrada"
+        cenario = "floresta"
     }
     else if (local == "FinalBom"){
         imagem = "url(view/img/cenarios/cenarioFinalBom.jpg)"
