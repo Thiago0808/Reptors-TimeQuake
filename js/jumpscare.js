@@ -39,6 +39,7 @@ function finalizarJumpscare(){
         setTimeout(() => {
             divJumpscare.style.display="none"
             body.classList.remove("bloquear")
+            imgJumpscare.src = ""
         }, duracao);
     };	
 }
@@ -46,10 +47,10 @@ function finalizarJumpscare(){
 // Fantasma
 function ativarJumpscareFantasma(){
     sorteado = sortearJumpscareFantasma()
+    imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
     console.log(sorteado)
     body.classList.add("bloquear")
     divJumpscare.style.display="block"
-    imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
     ativarSomJumpscareFantasma()
     finalizarJumpscare()
 }
