@@ -42,7 +42,7 @@ function alterarSanidade(alteracao){
         conjuntoNorteador.push(questaoSilhueta)
 
         var questaoEsquisita = {nome: "questaoEsquisita", titulo: "Susto peculiar", botao1: "Aceitar o confronto e lutar contra a criatura", botao2: "Recuar e procurar uma rota alternativa para evitar o confronto", texto: "A criatura surge diante de você, emitindo um rugido. Essa criatura é mais esquisita das que você já lidou. Mesmo assim, o desespero é o mesmo, e a criatura parece te confrontar. Você irá:",}
-        conjuntoEntrada.push(questaoEsquisita)
+        conjuntoNorteador.push(questaoEsquisita)
     }
 }
 

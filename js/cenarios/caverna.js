@@ -30,11 +30,6 @@ var questaoMochila = {nome: "questaoMochila", titulo: "Inesperado, mas útil", b
 conjuntoMochila = [questaoMochila]
 mochilaUsados = []
 
-
-var questaoVoador = {nome: "questaoVoador", titulo: "Demônio com asas", botao1: "Continuar andando olhando para o céu, para ver se encontra a criatura", botao2: "Continuar andando normalmente. Você vai ignorar o que houve", texto: "Antes mesmo de você fazer qualquer coisa, a criatura voa diante de seus olhos. Você não acredita no que está vendo. Não demora muito para a criatura simplesmente voar para longe, sem razão. Você se questiona o que acabou de acontecer. Na verdade, o que está acontecendo? Desorientado, você irá:",}
-conjuntoVoador = [questaoVoador]
-voadorUsados = []
-
 function ativarConjuntoCaverna(botao){
     if (botao == "inicial"){
         alterarTexto(questaoEntrada)
@@ -67,9 +62,6 @@ function ativarConjuntoCaverna(botao){
                 else{
                     cec() // Controlador das questões de Entrada da Caverna
                 }
-            }
-            else if(questaoAtual.nome == "questaoEsquisita"){
-                cvc() // Controlador das questões de Voador da Caverna            
             }
             else if(questaoAtual.nome == "questaoExpulso"){
                 mudarCenario("floresta")
@@ -133,15 +125,6 @@ function cjc(){
     consequenciasCaverna(questao)
 }
 
-function cvc(){
-    sorteado = sortearQuestao(conjuntoVoador.length, voadorUsados)
-    questao = conjuntoVoador[sorteado]
-    alterarTexto(questao)
-    questaoAtual = questao
-    conjuntoAtual = "conjuntoVoador"
-    consequenciasCaverna(questao)
-}
-
 function cmuc(){
     sorteado = sortearQuestao(conjuntoMurmurios.length, murmuriosUsados)
     questao = conjuntoMurmurios[sorteado]
@@ -165,10 +148,6 @@ function consequenciasCaverna(questao){
     if (conjuntoAtual == "conjuntoEntrada"){
         if (questaoAtual.nome == "questaoRupestre"){
             alterarVida("perde")
-        }
-        if (questaoAtual.nome == "questaoEsquisita"){
-            alterarSanidade("perde")
-            ativarJumpscareFantasma()
         }
     }
     else if (conjuntoAtual == "conjuntoJumpscareCaverna"){

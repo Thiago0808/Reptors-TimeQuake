@@ -107,6 +107,11 @@ var questaoLonge = {nome: "questaoLonge", titulo: "Longe da montanha. Perto do m
 conjuntoLonge = [questaoLonge]
 longeUsados = []
 
+
+var questaoVoador = {nome: "questaoVoador", titulo: "Demônio com asas", botao1: "Continuar andando olhando para o céu, para ver se encontra a criatura", botao2: "Continuar andando normalmente. Você vai ignorar o que houve", texto: "Antes mesmo de você fazer qualquer coisa, a criatura voa diante de seus olhos. Você não acredita no que está vendo. Não demora muito para a criatura simplesmente voar para longe, sem razão. Você se questiona o que acabou de acontecer. Na verdade, o que está acontecendo? Desorientado, você irá:",}
+conjuntoVoador = [questaoVoador]
+voadorUsados = []
+
 function ativarConjuntoFloresta(botao){
     if (conjuntoAtual == "conjuntoNorteador"){
         if (questaoAtual.nome == "questaoInicial" || questaoAtual.nome == "questaoPonte"|| questaoAtual.nome == "questaoSilhueta" || questaoAtual.nome == "questaoRefugio"){
@@ -171,6 +176,9 @@ function ativarConjuntoFloresta(botao){
                 clf() // Controlador das questões de Longe da montanha da Floresta
             }
         }
+        else if(questaoAtual.nome == "questaoEsquisita"){
+            cvf() // Controlador das questões de Voador da Floresta            
+        }
     }
     else if (conjuntoAtual == "conjuntoSono"){
         if (questaoAtual.nome == "questaoDormiu"){
@@ -206,7 +214,7 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha" || conjuntoAtual == "conjuntoGravetoArbusto" || conjuntoAtual == "conjuntoGravetoPedras" || conjuntoAtual == "conjuntoAranhaMorta" || conjuntoAtual == "conjuntoMontanha" || conjuntoAtual == "conjuntoLonge"){
+    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha" || conjuntoAtual == "conjuntoGravetoArbusto" || conjuntoAtual == "conjuntoGravetoPedras" || conjuntoAtual == "conjuntoAranhaMorta" || conjuntoAtual == "conjuntoMontanha" || conjuntoAtual == "conjuntoLonge" || conjuntoAtual == "conjuntoVoador"){
         cnf() // Controlador das questões Norteadoras da Floresta
     }
     
@@ -348,6 +356,15 @@ function cgpf(){
     consequenciasFloresta(questao)
 }
 
+function cvf(){
+    sorteado = sortearQuestao(conjuntoVoador.length, voadorUsados)
+    questao = conjuntoVoador[sorteado]
+    alterarTexto(questao)
+    questaoAtual = questao
+    conjuntoAtual = "conjuntoVoador"
+    consequenciasCaverna(questao)
+}
+
 function consequenciasFloresta(questao){
     if (conjuntoAtual == "conjuntoNorteador"){
         if (questaoAtual.nome == "questaoPerigo"){
@@ -360,6 +377,10 @@ function consequenciasFloresta(questao){
             ativarJumpscare()
         }
         if (questaoAtual.nome == "questaoSilhueta"){
+            alterarSanidade("perde")
+            ativarJumpscareFantasma()
+        }
+        if (questaoAtual.nome == "questaoEsquisita"){
             alterarSanidade("perde")
             ativarJumpscareFantasma()
         }
