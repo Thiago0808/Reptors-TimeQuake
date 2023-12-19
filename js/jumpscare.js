@@ -55,14 +55,15 @@ function ativarJumpscareFantasma(){
 }
 
 function sortearJumpscareFantasma(){
-    permitidos = numerosPermitidos(2, jumpscareFantasmaUsados)
+    permitidos = numerosPermitidos(3, jumpscareFantasmaUsados)
+    console.log(permitidos)
     if (permitidos.length>0){
         condicao = true
         while (condicao){
-            sorteado = Math.ceil(Math.random()*2)
+            sorteado = Math.ceil(Math.random()*3)
             for (let i=0; i<permitidos.length; i++){
                 //console.log(usados[i], sorteado)
-                if (sorteado == 1 || sorteado == 2){
+                if (permitidos[i] == sorteado){
                     condicao = false
                 }
             }

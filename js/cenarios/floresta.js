@@ -214,7 +214,7 @@ function ativarConjuntoFloresta(botao){
             }
         }
     }
-    else if (conjuntoAtual == "conjuntoFrutas" || conjuntoAtual == "conjuntoInseto" || conjuntoAtual == "conjuntoSemRio" || conjuntoAtual == "conjuntoFolhas" || conjuntoAtual == "conjuntoCaixote" || conjuntoAtual == "conjuntoBatalha" || conjuntoAtual == "conjuntoGravetoArbusto" || conjuntoAtual == "conjuntoGravetoPedras" || conjuntoAtual == "conjuntoAranhaMorta" || conjuntoAtual == "conjuntoMontanha" || conjuntoAtual == "conjuntoLonge" || conjuntoAtual == "conjuntoVoador"){
+    else{
         cnf() // Controlador das questões Norteadoras da Floresta
     }
     
@@ -371,16 +371,16 @@ function consequenciasFloresta(questao){
             alterarSanidade("perde")
             ativarJumpscare()
         }
-        if (questaoAtual.nome == "questaoBatalha"){
+        else if (questaoAtual.nome == "questaoBatalha"){
             alterarSanidade("perde")
             alterarVida("perde")
             ativarJumpscare()
         }
-        if (questaoAtual.nome == "questaoSilhueta"){
+        else if (questaoAtual.nome == "questaoSilhueta"){
             alterarSanidade("perde")
             ativarJumpscareFantasma()
         }
-        if (questaoAtual.nome == "questaoEsquisita"){
+        else if (questaoAtual.nome == "questaoEsquisita"){
             alterarSanidade("perde")
             ativarJumpscareFantasma()
         }
