@@ -445,6 +445,7 @@ function consequenciasFloresta(questao){
     else if (conjuntoAtual == "conjuntoGravetoArbusto"){
         if (questaoAtual.nome == "questaoGravetoArbusto"){
             alterarVida("ganha")
+            alterarSanidade("perde")
         }
     }
     else if (conjuntoAtual == "conjuntoGravetoPedras"){
