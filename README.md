@@ -1,3 +1,4 @@
+![reptorstimequake1](https://github.com/Thiago0808/Reptors-TimeQuake/assets/117865319/23f8efb5-1627-4fb9-854e-43e9d6a5fa4b)
 # Reptor's TimeQuake
 Os criadores agradecem por você visualizar esse pequeno projeto: o jogo de Terror sobre dinossauros e viagem no tempo nomeado Reptor's TimeQuake.Todo o desenvolvimento, desde a programação até as interfaces e histórias, foi realizado pela nossa equipe, enquanto as imagens foram geradas por meio de inteligência artificial, e os efeitos sonoros foram fornecidos pela Pixabay. 
 
