@@ -108,7 +108,7 @@ conjuntoLonge = [questaoLonge]
 longeUsados = []
 
 
-var questaoVoador = {nome: "questaoVoador", titulo: "Demônio com asas", botao1: "Continuar andando olhando para o céu, para ver se encontra a criatura", botao2: "Continuar andando normalmente. Você vai ignorar o que houve", texto: "Antes mesmo de você fazer qualquer coisa, a criatura voa diante de seus olhos. Você não acredita no que está vendo. Não demora muito para a criatura simplesmente voar para longe, sem razão. Você se questiona o que acabou de acontecer. Na verdade, o que está acontecendo? Desorientado, você irá:",}
+var questaoVoador = {nome: "questaoVoador", titulo: "Demônio com asas", botao1: "Andar olhando para o céu, para ver se encontra a criatura", botao2: "Continuar andando. Você vai ignorar o que houve", texto: "Antes mesmo de você fazer qualquer coisa, a criatura voa diante de seus olhos. Você não acredita no que está vendo. Não demora muito para a criatura simplesmente voar para longe, sem razão. Você se questiona o que acabou de acontecer. Na verdade, o que está acontecendo? Desorientado, você irá:",}
 conjuntoVoador = [questaoVoador]
 voadorUsados = []
 
