@@ -19,20 +19,13 @@ primeiraVez = true
 function alterarSanidade(alteracao){
     if (alteracao == "ganha" && verificarSanidade()<100){
         quantidadeSanidade += 10;
-
-        let icone = document.querySelector(".sanidade");
-        tremerIcone(icone)
     }
     else if (alteracao == "perde"){
         quantidadeSanidade -= 10;
+    }
 
-        let icone = document.querySelector(".sanidade");
-        tremerIcone(icone)
-    }
-    else{
-        barraSanidade.value = quantidadeSanidade
-        porcentagemSanidade.innerHTML = quantidadeSanidade+"%"
-    }
+    barraSanidade.value = quantidadeSanidade
+    porcentagemSanidade.innerHTML = quantidadeSanidade+"%"
 
     if (quantidadeSanidade<60 && primeiraVez){
         primeiraVez = false
@@ -42,24 +35,23 @@ function alterarSanidade(alteracao){
         var questaoEsquisita = {nome: "questaoEsquisita", titulo: "Susto peculiar", botao1: "Aceitar o confronto e lutar contra a criatura", botao2: "Recuar e procurar uma rota alternativa para evitar o confronto", texto: "A criatura surge diante de você, emitindo um rugido. Essa criatura é mais esquisita das que você já lidou. Mesmo assim, o desespero é o mesmo, e a criatura parece te confrontar. Você irá:",}
         conjuntoNorteador.push(questaoEsquisita)
     }
+
+    let icone = document.querySelector(".sanidade");
+    tremerIcone(icone)
 }
 
 function alterarVida(alteracao){
     if (alteracao == "ganha" && verificarVida()<100){
         quantidadeVida += 10;
-
-        let icone = document.querySelector(".vida");
-        tremerIcone(icone)
     }
     else  if (alteracao == "perde"){
         quantidadeVida -= 10;
+    }
 
-        let icone = document.querySelector(".vida");
-        tremerIcone(icone)
-    }
-    else{
-        barraVida.value = quantidadeVida
-        porcentagemVida.innerHTML = quantidadeVida+"%"
-    }
+    barraVida.value = quantidadeVida
+    porcentagemVida.innerHTML = quantidadeVida+"%"
+
+    let icone = document.querySelector(".vida");
+    tremerIcone(icone)
 }
 
