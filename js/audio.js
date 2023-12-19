@@ -41,8 +41,7 @@ function sortearSom(){
     if (permitidos.length>0){
         condicao = true
         while (condicao){
-            sorteado = Math.ceil(Math.random()*13)
-            sorteado --;
+            sorteado = Math.ceil(Math.random()*8)
             for (let i=0; i<permitidos.length; i++){
                 //console.log(usados[i], sorteado)
                 if (permitidos[i] == sorteado){
@@ -72,8 +71,7 @@ function sortearSomFantasma(){
     if (permitidos.length>0){
         condicao = true
         while (condicao){
-            sorteado = Math.ceil(Math.random()*13)
-            sorteado --;
+            sorteado = Math.ceil(Math.random()*5)
             for (let i=0; i<permitidos.length; i++){
                 //console.log(usados[i], sorteado)
                 if (permitidos[i] == sorteado){

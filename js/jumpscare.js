@@ -20,7 +20,6 @@ function sortearJumpscare(){
         condicao = true
         while (condicao){
             sorteado = Math.ceil(Math.random()*6)
-            sorteado --;
             for (let i=0; i<permitidos.length; i++){
                 //console.log(usados[i], sorteado)
                 if (permitidos[i] == sorteado){
@@ -47,6 +46,7 @@ function finalizarJumpscare(){
 // Fantasma
 function ativarJumpscareFantasma(){
     sorteado = sortearJumpscareFantasma()
+    console.log(sorteado)
     body.classList.add("bloquear")
     divJumpscare.style.display="block"
     imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
@@ -60,7 +60,6 @@ function sortearJumpscareFantasma(){
         condicao = true
         while (condicao){
             sorteado = Math.ceil(Math.random()*2)
-            sorteado --;
             for (let i=0; i<permitidos.length; i++){
                 //console.log(usados[i], sorteado)
                 if (permitidos[i] == sorteado){
