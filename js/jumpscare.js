@@ -9,8 +9,8 @@ function ativarJumpscare(){
     sorteado = sortearJumpscare()
     imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
     setTimeout(() => {
-        body.classList.add("bloquear")
         divJumpscare.style.display="block"
+        body.classList.add("bloquear")
         ativarSomJumpscare()
         finalizarJumpscare()
     }, 500);
@@ -52,8 +52,8 @@ function ativarJumpscareFantasma(){
     imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
     setTimeout(() => {
         console.log(sorteado)
-        body.classList.add("bloquear")
         divJumpscare.style.display="block"
+        body.classList.add("bloquear")
         ativarSomJumpscareFantasma()
         finalizarJumpscare()
     }, 500);
