@@ -62,7 +62,7 @@ function sortearJumpscareFantasma(){
             sorteado = Math.ceil(Math.random()*2)
             for (let i=0; i<permitidos.length; i++){
                 //console.log(usados[i], sorteado)
-                if (permitidos[i] == sorteado){
+                if (sorteado == 1 || sorteado == 2){
                     condicao = false
                 }
             }
