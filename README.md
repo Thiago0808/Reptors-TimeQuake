@@ -8,6 +8,6 @@ Gostaríamos que considerasse esta iniciativa como uma exploração das capacida
 
 O jogo está hospedado no [Vercel](https://reptors-timequake.vercel.app/). Acesse e jogue!
 
-Esperamos que tenha apreciado a experiência de Reptor’s TimeQuake e convidamos você a ver o código fonte disponível para aprofundar-se sobre o processo de desenvolvimento. O seu apoio e interesse são fundamentais para nós. Obrigado por se juntar a nós nesta jornada!
+Esperamos que tenha apreciado a experiência de Reptor’s TimeQuake e convidamos você a ver o código fonte disponível para aprofundar-se sobre o processo de desenvolvimento. O seu apoio e interesse são fundamentais para nós. Não esqueça de dar uma estrela! Obrigado por se juntar a nós nesta jornada!
 
 ![reptorstimequake2](https://github.com/Thiago0808/Reptors-TimeQuake/assets/117865319/79b0b779-f946-4e17-b6a1-5a542ce401c1)
