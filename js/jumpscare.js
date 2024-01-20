@@ -7,11 +7,13 @@ jumpscareFantasmaUsados= [0];
 
 function ativarJumpscare(){
     sorteado = sortearJumpscare()
-    body.classList.add("bloquear")
-    divJumpscare.style.display="block"
     imgJumpscare.src = "view/img/jumpscare/dinoNormal"+sorteado+".png"
-    ativarSomJumpscare()
-    finalizarJumpscare()
+    setTimeout(() => {
+        divJumpscare.style.display="block"
+        body.classList.add("bloquear")
+        ativarSomJumpscare()
+        finalizarJumpscare()
+    }, 500);
 }
 
 function sortearJumpscare(){
@@ -39,6 +41,7 @@ function finalizarJumpscare(){
         setTimeout(() => {
             divJumpscare.style.display="none"
             body.classList.remove("bloquear")
+            imgJumpscare.src = ""
         }, duracao);
     };	
 }
@@ -46,12 +49,14 @@ function finalizarJumpscare(){
 // Fantasma
 function ativarJumpscareFantasma(){
     sorteado = sortearJumpscareFantasma()
-    console.log(sorteado)
-    body.classList.add("bloquear")
-    divJumpscare.style.display="block"
     imgJumpscare.src = "view/img/jumpscare/dinoFantasma"+sorteado+".png"
-    ativarSomJumpscareFantasma()
-    finalizarJumpscare()
+    setTimeout(() => {
+        console.log(sorteado)
+        divJumpscare.style.display="block"
+        body.classList.add("bloquear")
+        ativarSomJumpscareFantasma()
+        finalizarJumpscare()
+    }, 500);
 }
 
 function sortearJumpscareFantasma(){
@@ -62,7 +67,6 @@ function sortearJumpscareFantasma(){
         while (condicao){
             sorteado = Math.ceil(Math.random()*3)
             for (let i=0; i<permitidos.length; i++){
-                //console.log(usados[i], sorteado)
                 if (permitidos[i] == sorteado){
                     condicao = false
                 }

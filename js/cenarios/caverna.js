@@ -13,7 +13,7 @@ conjuntoEntrada = [questaoSaida, questaoRupestre, questaoBifurcacao]
 entradaUsados = []
 
 
-var questaoJumpscareCaverna = {nome: "questaoJumpscareCaverna", titulo: "Sons da morte e da salvação", botao1: "Seguir correndo. Você teme a criatura voltar", botao2: "Seguir andando. O perigoso já passou", texto: "As garras frias e escorregadias agarram você com força. Desesperado, você tenta se soltar, em vão. De repente, um barulho nos fundos da caverna desperta a curiosidade da criatura. A mesma te larga e sai correndo em direção ao barulho. Assustado, mas aliviado de ter sobrevivido a situação, você irá:",}
+var questaoJumpscareCaverna = {nome: "questaoJumpscareCaverna", titulo: "Sons da morte e da salvação", botao1: "Seguir correndo. Você teme a criatura voltar", botao2: "Seguir andando. O perigo já passou", texto: "As garras frias e escorregadias agarram você com força. Desesperado, você tenta se soltar, em vão. De repente, um barulho nos fundos da caverna desperta a curiosidade da criatura. A mesma te larga e sai correndo em direção ao barulho. Assustado, mas aliviado de ter sobrevivido a situação, você irá:",}
 
 conjuntoJumpscareCaverna = [questaoJumpscareCaverna]
 jumpscaraCavernaUsados = []
@@ -25,7 +25,7 @@ conjuntoMurmurios = [questaoMurmurios]
 murmuriosUsados = []
 
 
-var questaoMochila = {nome: "questaoMochila", titulo: "Inesperado, mas útil", botao1: "Você pega a mochila. Vai ser um ótimo armazenamento", botao2: "Você ignora a mochila. Os possíveis humanos podem sentir falta", texto: "Você chega na sala oculta, mas os vultos já desapareceram. Você explora o lugar e encontra uma espécie de mochila de couro",}
+var questaoMochila = {nome: "questaoMochila", titulo: "Inesperado, mas útil", botao1: "Você pega a mochila. Vai ser útil", botao2: "Você ignora a mochila. Os 'humanos' podem sentir falta", texto: "Você chega na sala oculta, mas os vultos já desapareceram. Você explora o lugar e encontra uma espécie de mochila de couro. Como isso poderia ter sido confeccionado? Será que existem humanos mesmo nesta época? Será que a máquina do tempo afetou mais a realidade do que deveria? Muitas dúvidas, mas pouco tempo. Você precisa agir. Você irá:",}
 
 conjuntoMochila = [questaoMochila]
 mochilaUsados = []
